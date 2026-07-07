@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merchandise — Nova Studios Shop</title>
-    <meta name="description" content="Shop official Nova Studios merchandise, collectibles, apparel, and exclusive products from your favorite films and shows.">
+    <meta name="description"
+        content="Shop official Nova Studios merchandise, collectibles, apparel, and exclusive products from your favorite films and shows.">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/movies.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/utilities.css">
+    <script src="../js/merchandise-filter.js"></script>
 </head>
+
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="navbar-brand"><span class="logo-text">NOVA<span class="logo-accent">STUDIOS</span></span></a>
+            <a href="../index.html" class="navbar-brand"><span class="logo-text">NOVA<span
+                        class="logo-accent">STUDIOS</span></span></a>
             <ul class="nav-links">
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../movies.html">Entertainment</a></li>
@@ -43,17 +49,17 @@
         <section class="section">
             <div class="container">
                 <div class="filter-bar">
-                    <button class="filter-btn active">All Products</button>
-                    <button class="filter-btn">Apparel</button>
-                    <button class="filter-btn">Collectibles</button>
-                    <button class="filter-btn">Toys</button>
-                    <button class="filter-btn">Home &amp; Living</button>
-                    <button class="filter-btn">Accessories</button>
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="apparel">Apparel</button>
+                    <button class="filter-btn" data-filter="collectibles">Collectibles</button>
+                    <button class="filter-btn" data-filter="toys">Toys</button>
+                    <button class="filter-btn" data-filter="home-living">Home &amp; Living</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
                 </div>
 
                 <!-- ISSUE (Intermediate): Flexbox wrapping issues — product cards don't wrap evenly on medium screens -->
                 <div class="card-grid-4">
-                    <div class="product-card">
+                    <div class="product-card" data-category="apparel">
                         <!-- ISSUE (Beginner): product-card .card-img missing object-fit — image stretches -->
                         <div class="placeholder-img accent card-img" style="height: 220px;">Stellar Horizon Jacket</div>
                         <div class="card-body">
@@ -62,7 +68,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="toys">
                         <div class="placeholder-img blue card-img" style="height: 220px;">Flicker Plush</div>
                         <div class="card-body">
                             <div class="product-name">Flicker Collectible Plush</div>
@@ -70,7 +76,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="collectibles">
                         <div class="placeholder-img dark card-img" style="height: 220px;">Ashenmoor Map Poster</div>
                         <div class="card-body">
                             <div class="product-name">Ashenmoor Kingdom Map — Limited Print</div>
@@ -78,7 +84,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="home-living">
                         <div class="placeholder-img green card-img" style="height: 220px;">Nova Studios Mug</div>
                         <div class="card-body">
                             <div class="product-name">Nova Studios Classic Mug</div>
@@ -86,7 +92,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="toys">
                         <div class="placeholder-img purple card-img" style="height: 220px;">Captain Orbit Figure</div>
                         <div class="card-body">
                             <div class="product-name">Captain Orbit Action Figure</div>
@@ -94,7 +100,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="collectibles">
                         <div class="placeholder-img red card-img" style="height: 220px;">Luminara Art Book</div>
                         <div class="card-body">
                             <div class="product-name">The Art of Luminara — Deluxe Edition</div>
@@ -102,7 +108,7 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="apparel">
                         <div class="placeholder-img accent card-img" style="height: 220px;">Nova+ T-Shirt</div>
                         <div class="card-body">
                             <div class="product-name">Nova+ Logo T-Shirt</div>
@@ -110,11 +116,12 @@
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-category="accessories">
                         <div class="placeholder-img blue card-img" style="height: 220px;">Stardust Snowglobe</div>
                         <div class="card-body">
                             <!-- ISSUE (Beginner): Text overflows card on narrow screens -->
-                            <div class="product-name">Stardust Kingdom Collector's Snow Globe — Limited Edition 2024</div>
+                            <div class="product-name">Stardust Kingdom Collector's Snow Globe — Limited Edition 2024
+                            </div>
                             <div class="product-price">$59.99</div>
                             <a href="#" class="btn btn-primary btn-sm w-100">Add to Cart</a>
                         </div>
@@ -127,15 +134,47 @@
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
-                <div class="footer-brand"><span class="logo-text">NOVA<span class="logo-accent">STUDIOS</span></span></div>
-                <p>Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
-                <div class="footer-social"><a href="#">FB</a><a href="#">TW</a><a href="#">IG</a><a href="#">YT</a><a href="#">LI</a></div>
+                <div class="footer-brand"><span class="logo-text">NOVA<span class="logo-accent">STUDIOS</span></span>
+                </div>
+                <p>Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.
+                </p>
+                <div class="footer-social"><a href="#">FB</a><a href="#">TW</a><a href="#">IG</a><a href="#">YT</a><a
+                        href="#">LI</a></div>
             </div>
-            <div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About Us</a></li><li><a href="../company/careers.html">Careers</a></li><li><a href="../news.html">News</a></li><li><a href="../company/investors.html">Investors</a></li></ul></div>
-            <div class="footer-col"><h3>Entertainment</h3><ul><li><a href="../movies.html">Movies</a></li><li><a href="tv-shows.html">TV Shows</a></li><li><a href="streaming.html">Nova+</a></li><li><a href="theme-parks.html">Theme Parks</a></li></ul></div>
-            <div class="footer-col"><h3>Support</h3><ul><li><a href="../support/help.html">Help Center</a></li><li><a href="../contact.html">Contact Us</a></li><li><a href="../support/faq.html">FAQ</a></li><li><a href="../legal/privacy.html">Privacy</a></li></ul></div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../company/careers.html">Careers</a></li>
+                    <li><a href="../news.html">News</a></li>
+                    <li><a href="../company/investors.html">Investors</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Entertainment</h3>
+                <ul>
+                    <li><a href="../movies.html">Movies</a></li>
+                    <li><a href="tv-shows.html">TV Shows</a></li>
+                    <li><a href="streaming.html">Nova+</a></li>
+                    <li><a href="theme-parks.html">Theme Parks</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="../support/help.html">Help Center</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../support/faq.html">FAQ</a></li>
+                    <li><a href="../legal/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2026 Nova Studios. All rights reserved.</p><div class="footer-bottom-links"><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/accessibility-page.html">Accessibility</a></div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nova Studios. All rights reserved.</p>
+            <div class="footer-bottom-links"><a href="../legal/privacy.html">Privacy</a><a
+                    href="../legal/terms.html">Terms</a><a href="../legal/accessibility-page.html">Accessibility</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -113,8 +113,7 @@ select.form-control {
     background-color: #1d4ed8;
 }
 
-/* ISSUE (Intermediate): Search form input and button heights don't match 
-   because input uses content-box equivalent with different border widths */
+
 
 /* Form error state */
 .form-control.error {

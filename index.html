@@ -321,7 +321,7 @@
                 <!-- ISSUE (Intermediate): No label element for newsletter input — accessibility -->
                 <div class="newsletter-form-large">
                     <input type="email" placeholder="Enter your email address">
-                    <button type="button">Subscribe</button>
+                    <button type="button" onclick="this.previousElementSibling.value=''">Subscribe</button>
                 </div>
             </div>
         </section>
@@ -376,7 +376,7 @@
                     <p>Get updates:</p>
                     <div class="newsletter-form">
                         <input type="email" placeholder="Your email">
-                        <button>Go</button>
+                        <button onclick="this.previousElementSibling.value=''">Go</button>
                     </div>
                 </div>
             </div>

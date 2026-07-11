@@ -12,31 +12,34 @@
     border-radius: 6px;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 .btn-primary {
-
-    background-color: #2563eb;
+    background-color: var(--link-color);
     color: #ffffff;
-    border-color: #2563eb;
+    border-color: var(--link-color);
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
     text-decoration: none;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #2563eb;
-    border-color: #2563eb;
+    color: var(--btn-secondary-text);
+    border-color: var(--btn-secondary-border);
 }
 
-/* ISSUE (Beginner): .btn-secondary has no hover style */
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-text);
+    color: var(--bg-primary);
+    text-decoration: none;
+}
 
 .btn-accent {
     background-color: #f59e0b;
@@ -51,25 +54,26 @@
 }
 
 .btn-dark {
-    background-color: #0a1628;
-    color: #ffffff;
-    border-color: #0a1628;
+    background-color: var(--btn-dark-bg);
+    color: var(--btn-dark-text);
+    border-color: var(--btn-dark-bg);
 }
 
 .btn-dark:hover {
-    background-color: #1e293b;
-    border-color: #1e293b;
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .btn-light {
-    background-color: #ffffff;
-    color: #0a1628;
-    border-color: #ffffff;
+    background-color: var(--btn-light-bg);
+    color: var(--btn-light-text);
+    border-color: var(--btn-light-bg);
 }
 
 .btn-light:hover {
-    background-color: #f3f4f6;
+    background-color: var(--bg-tertiary);
     text-decoration: none;
 }
 
@@ -92,8 +96,9 @@
     font-size: 1.15rem;
 }
 
-.btn:focus {
-    outline: 2px solid #3b82f6;
+/* Keyboard accessibility button focus indicator */
+.btn:focus-visible {
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -101,7 +106,7 @@
 .btn-ghost {
     background: none;
     border: none;
-    color: #3b82f6;
+    color: var(--btn-ghost-text);
     padding: 8px 16px;
     cursor: pointer;
     font-size: 0.9rem;

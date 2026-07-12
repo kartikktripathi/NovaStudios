@@ -207,6 +207,8 @@
                             <option value="paris" data-i18n="booking_booking.nova_world_paris_france">Nova World — Paris, France</option>
                             <option value="shanghai" data-i18n="booking_booking.dreamscape_shanghai_china">Dreamscape — Shanghai, China</option>
                             <option value="sydney" data-i18n="booking_booking.adventure_isles_sydney_australia">Adventure Isles — Sydney, Australia</option>
+                            <option value="novafan" data-i18n="booking_booking.novafan_con_2025">NovaFan Con 2025</option>
+                            <option value="premiere" data-i18n="booking_booking.the_last_kingdom_world_premiere">The Last Kingdom — World Premiere</option>
                         </select>
                     </div>
 
@@ -336,6 +338,16 @@
         </div>
     </div>
 
+    <!-- Date Warning Modal -->
+    <div class="modal-overlay" id="date-modal">
+        <div class="modal-content">
+            <div class="success-icon" style="background-color: var(--accent-color);" data-i18n="booking_booking.text_warning_icon">⚠</div>
+            <h2 class="mb-2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" data-i18n="booking_booking.invalid_date">Invalid Date</h2>
+            <p class="text-secondary mb-4" data-i18n="booking_booking.select_upcoming_dates">Select upcoming dates</p>
+            <button class="btn btn-primary btn-md" id="close-date-modal" data-i18n="booking_booking.ok">OK</button>
+        </div>
+    </div>
+
     <!-- Booking calculations and pre-population script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -354,6 +366,8 @@
             const bookingForm = document.getElementById('booking-form');
             const successModal = document.getElementById('success-modal');
             const closeModal = document.getElementById('close-modal');
+            const dateModal = document.getElementById('date-modal');
+            const closeDateModal = document.getElementById('close-date-modal');
 
             let selectedPrice = 99;
             let selectedTypeName = "Single Day Pass";
@@ -363,6 +377,15 @@
             tomorrow.setDate(tomorrow.getDate() + 1);
             visitDate.value = tomorrow.toISOString().split('T')[0];
             visitDate.min = new Date().toISOString().split('T')[0];
+
+            function checkPastDate(dateString) {
+                if (!dateString) return false;
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                const [year, month, day] = dateString.split('-').map(Number);
+                const selectedLocalDate = new Date(year, month - 1, day);
+                return selectedLocalDate < today;
+            }
 
             // 1. Parse URL Parameter for pre-selection
             const urlParams = new URLSearchParams(window.location.search);
@@ -410,12 +433,24 @@
             visitDate.addEventListener('input', updateSummary);
             qtyInput.addEventListener('input', updateSummary);
 
+            visitDate.addEventListener('change', () => {
+                if (checkPastDate(visitDate.value)) {
+                    dateModal.style.display = 'flex';
+                    visitDate.value = '';
+                    updateSummary();
+                }
+            });
+
             // Initial computation
             updateSummary();
 
             // 4. Form Submit & Modal Actions
             bookingForm.addEventListener('submit', (e) => {
                 e.preventDefault();
+                if (!visitDate.value || checkPastDate(visitDate.value)) {
+                    dateModal.style.display = 'flex';
+                    return;
+                }
                 successModal.style.display = 'flex';
             });
 
@@ -427,6 +462,16 @@
             successModal.addEventListener('click', (e) => {
                 if (e.target === successModal) {
                     successModal.style.display = 'none';
+                }
+            });
+
+            closeDateModal.addEventListener('click', () => {
+                dateModal.style.display = 'none';
+            });
+
+            dateModal.addEventListener('click', (e) => {
+                if (e.target === dateModal) {
+                    dateModal.style.display = 'none';
                 }
             });
         });

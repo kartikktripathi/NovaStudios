@@ -130,6 +130,7 @@
                                     <option value="careers" data-i18n="contact.careers">Careers</option>
                                     <option value="streaming" data-i18n="contact.nova_support">Nova+ Support</option>
                                     <option value="parks" data-i18n="contact.theme_parks">Theme Parks</option>
+                                    <option value="workshop" data-i18n="contact.animation_workshop">Animation Workshop</option>
                                     <option value="general" data-i18n="contact.general_question">General Question</option>
                                 </select>
                             </div>
@@ -214,6 +215,25 @@
         contactForm.addEventListener('input', () => {
             contactFormStatus.hidden = true;
         });
+
+        function preselectSubject() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subjectParam = urlParams.get('subject');
+            if (subjectParam) {
+                const subjectSelect = document.getElementById('subject') || document.getElementById('asunto');
+                if (subjectSelect) {
+                    const option = subjectSelect.querySelector(`option[value="${subjectParam}"]`);
+                    if (option) {
+                        option.selected = true;
+                    }
+                }
+            }
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', preselectSubject);
+        } else {
+            preselectSubject();
+        }
     </script>
 </body>
 </html>

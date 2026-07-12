@@ -392,7 +392,7 @@ window.translations.en = {
         "quantity_1_1": "<span>Quantity</span>\n                        <strong id=\"summary-qty\">1</strong>",
         "select_a_date": "Select a date",
         "select_theme_park": "Select Theme Park",
-        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Select Theme Park</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Choose a Park --</option>\n                            <option value=\"orlando\">Stardust Kingdom — Orlando, FL</option>\n                            <option value=\"paris\">Nova World — Paris, France</option>\n                            <option value=\"shanghai\">Dreamscape — Shanghai, China</option>\n                            <option value=\"sydney\">Adventure Isles — Sydney, Australia</option>\n                        </select>",
+        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Select Theme Park</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Choose a Park --</option>\n                            <option value=\"orlando\">Stardust Kingdom — Orlando, FL</option>\n                            <option value=\"paris\">Nova World — Paris, France</option>\n                            <option value=\"shanghai\">Dreamscape — Shanghai, China</option>\n                            <option value=\"sydney\">Adventure Isles — Sydney, Australia</option>\n                            <option value=\"novafan\">NovaFan Con 2025</option>\n                            <option value=\"premiere\">The Last Kingdom — World Premiere</option>\n                        </select>",
         "select_ticket_type": "Select Ticket Type",
         "select_visit_date": "<label for=\"visit-date\">Select Visit Date</label>\n                        <input type=\"date\" id=\"visit-date\" class=\"form-control\" required=\"\">",
         "select_visit_date_1": "Select Visit Date",
@@ -407,7 +407,12 @@ window.translations.en = {
         "total_inc_tax": "Total (inc. Tax)",
         "total_inc_tax_106_92": "<span>Total (inc. Tax)</span>\n                        <strong id=\"summary-total\">$106.92</strong>",
         "unlimited_entry_to_all_domestic_par": "Unlimited entry to all domestic parks for 365 days.",
-        "your_ticket_reservation_has_been_su": "Your ticket reservation has been successfully completed. A confirmation email with details and barcodes has been sent to your address."
+        "your_ticket_reservation_has_been_su": "Your ticket reservation has been successfully completed. A confirmation email with details and barcodes has been sent to your address.",
+        "novafan_con_2025": "NovaFan Con 2025",
+        "the_last_kingdom_world_premiere": "The Last Kingdom — World Premiere",
+        "invalid_date": "Invalid Date",
+        "select_upcoming_dates": "Select upcoming dates",
+        "ok": "OK"
     },
     "common": {},
     "company_careers": {
@@ -813,11 +818,12 @@ window.translations.en = {
         "send_us_a_message": "Send Us a Message",
         "skip_to_main_content": "Skip to main content",
         "subject": "Subject",
-        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Subject</label>\n                                <select id=\"subject\" name=\"subject\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Select a topic...</option>\n                                    <option value=\"press\">Press Inquiry</option>\n                                    <option value=\"partnership\">Partnership</option>\n                                    <option value=\"careers\">Careers</option>\n                                    <option value=\"streaming\">Nova+ Support</option>\n                                    <option value=\"parks\">Theme Parks</option>\n                                    <option value=\"general\">General Question</option>\n                                </select>",
+        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Subject</label>\n                                <select id=\"subject\" name=\"subject\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Select a topic...</option>\n                                    <option value=\"press\">Press Inquiry</option>\n                                    <option value=\"partnership\">Partnership</option>\n                                    <option value=\"careers\">Careers</option>\n                                    <option value=\"streaming\">Nova+ Support</option>\n                                    <option value=\"parks\">Theme Parks</option>\n                                    <option value=\"workshop\">Animation Workshop</option>\n                                    <option value=\"general\">General Question</option>\n                                </select>",
         "tell_us_how_we_can_help_placeholder": "Tell us how we can help...",
         "text_8xc8x": "&gt;",
         "thank_you_your_message_has_been_rec": "Thank you. Your message has been received and the form has been cleared.",
         "theme_parks": "Theme Parks",
+        "animation_workshop": "Animation Workshop",
         "we_d_love_to_hear_from_you_reach_ou": "We'd love to hear from you. Reach out for press inquiries, partnership opportunities, or general questions."
     },
     "entertainment_animation": {
@@ -1864,7 +1870,12 @@ window.translations.en = {
         "virtual": "Virtual",
         "virtual_1": "<span class=\"badge badge-success\">Virtual</span>",
         "workshop": "Workshop",
-        "workshop_register": "<span class=\"tag\">Workshop</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Register</a>"
+        "workshop_register": "<span class=\"tag\">Workshop</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Register</a>",
+        "event_info": "Event Information",
+        "june_1_august_31_2025_stardust_king_clean": "June 1 - August 31, 2025",
+        "stardust_kingdom_orlando": "Stardust Kingdom, Orlando",
+        "update_notification": "You will be updated as soon as new updates are out.",
+        "close": "Close"
     },
     "entertainment_merchandise": {
         "14_99": "$14.99",

@@ -69,8 +69,10 @@
 }
 
 /* Mega Menu */
-.nav-links li:hover .mega-menu {
-    display: block;
+@media (min-width: 769px) {
+    .nav-links li:hover .mega-menu {
+        display: block;
+    }
 }
 
 .mega-menu {
@@ -247,6 +249,78 @@
     }
     .nav-toggle.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar.nav-open .nav-links li {
+        width: 100%;
+    }
+
+    .navbar.nav-open .nav-links > li > a {
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Mobile Submenu Accordion Styling */
+    .nav-links li.has-submenu .mega-menu {
+        display: none;
+        position: static;
+        min-width: 100%;
+        background-color: #0e1e33;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 15px 24px;
+        margin-top: 5px;
+        border-left: 3px solid #f59e0b;
+    }
+
+    .nav-links li.has-submenu.submenu-open .mega-menu {
+        display: block;
+    }
+
+    .nav-links li.has-submenu .mega-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .nav-links li.has-submenu .mega-menu-header {
+        color: #f59e0b;
+        font-size: 0.75rem;
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 8px;
+    }
+
+    .nav-links li.has-submenu .mega-menu a {
+        color: #d1d5db;
+        padding: 8px 0;
+        display: block;
+        font-size: 0.85rem;
+        transition: color 0.2s, padding-left 0.2s;
+    }
+
+    .nav-links li.has-submenu .mega-menu a:hover {
+        color: #ffffff;
+        background-color: transparent;
+        padding-left: 5px;
+    }
+
+    /* Add chevron indicators to items with submenus */
+    .nav-links li.has-submenu > a::after {
+        content: '\f078'; /* Font Awesome 6 chevron-down */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        margin-left: auto;
+    }
+
+    .nav-links li.has-submenu.submenu-open > a::after {
+        transform: rotate(180deg);
+        color: #f59e0b;
     }
 }
 

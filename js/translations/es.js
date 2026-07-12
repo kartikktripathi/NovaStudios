@@ -392,7 +392,7 @@ window.translations.es = {
         "quantity_1_1": "<span>Cantidad</span>\n                        <strong id=\"summary-qty\">1</strong>",
         "select_a_date": "Seleccione una fecha",
         "select_theme_park": "Seleccionar parque temático",
-        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Seleccionar parque temático</label>\n                        <seleccione id=\"park-select\" class=\"form-control\" requerido=\"\">\n                            <option value=\"\"disable=\"\" selected=\"\">-- Elija un parque --</option>\n                            <option value=\"orlando\">Reino de Stardust: Orlando, Florida</option>\n                            <option value=\"paris\">Nova World — París, Francia</option>\n                            <option value=\"shanghai\">Paisaje de ensueño: Shanghái, China</option>\n                            <option value=\"sydney\">Islas de la Aventura: Sídney, Australia</option>\n                        </seleccionar>",
+        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Seleccionar parque temático</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Elija un parque --</option>\n                            <option value=\"orlando\">Reino de Stardust: Orlando, Florida</option>\n                            <option value=\"paris\">Nova World — París, Francia</option>\n                            <option value=\"shanghai\">Paisaje de ensueño: Shanghái, China</option>\n                            <option value=\"sydney\">Islas de la Aventura: Sídney, Australia</option>\n                            <option value=\"novafan\">NovaFan Con 2025</option>\n                            <option value=\"premiere\">El último reino — Estreno mundial</option>\n                        </select>",
         "select_ticket_type": "Seleccione el tipo de billete",
         "select_visit_date": "<label for=\"visit-date\">Seleccione fecha de visita</label>\n                        <tipo de entrada=\"fecha\" id=\"fecha-visita\" clase=\"control-formulario\" requerido=\"\">",
         "select_visit_date_1": "Seleccionar fecha de visita",
@@ -407,7 +407,12 @@ window.translations.es = {
         "total_inc_tax": "Total (impuestos incluidos)",
         "total_inc_tax_106_92": "<span>Total (impuestos incluidos)</span>\n                        <strong id=\"summary-total\">$106,92</strong>",
         "unlimited_entry_to_all_domestic_par": "Entrada ilimitada a todos los parques nacionales durante los 365 días.",
-        "your_ticket_reservation_has_been_su": "La reserva de su billete se ha completado con éxito. Se ha enviado a su dirección un correo electrónico de confirmación con detalles y códigos de barras."
+        "your_ticket_reservation_has_been_su": "La reserva de su billete se ha completado con éxito. Se ha enviado a su dirección un correo electrónico de confirmación con detalles y códigos de barras.",
+        "novafan_con_2025": "NovaFan Con 2025",
+        "the_last_kingdom_world_premiere": "El último reino — Estreno mundial",
+        "invalid_date": "Fecha no válida",
+        "select_upcoming_dates": "Seleccione fechas futuras",
+        "ok": "Aceptar"
     },
     "common": {},
     "company_careers": {
@@ -813,11 +818,12 @@ window.translations.es = {
         "send_us_a_message": "Envíanos un mensaje",
         "skip_to_main_content": "Saltar al contenido principal",
         "subject": "Sujeto",
-        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Asunto</label>\n                                <seleccione id=\"asunto\" nombre=\"asunto\" clase=\"control-formulario\" requerido=\"\">\n                                    <option value=\"\">Seleccione un tema...</option>\n                                    <option value=\"press\">Consulta de prensa</option>\n                                    <option value=\"partnership\">Asociación</option>\n                                    <option value=\"careers\">Carreras</option>\n                                    <option value=\"streaming\">Soporte Nova+</option>\n                                    <option value=\"parks\">Parques Temáticos</option>\n                                    <option value=\"general\">Pregunta general</option>\n                                </seleccionar>",
+        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Asunto</label>\n                                <select id=\"asunto\" name=\"asunto\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Seleccione un tema...</option>\n                                    <option value=\"press\">Consulta de prensa</option>\n                                    <option value=\"partnership\">Asociación</option>\n                                    <option value=\"careers\">Carreras</option>\n                                    <option value=\"streaming\">Soporte Nova+</option>\n                                    <option value=\"parks\">Parques Temáticos</option>\n                                    <option value=\"workshop\">Taller de animación</option>\n                                    <option value=\"general\">Pregunta general</option>\n                                </select>",
         "tell_us_how_we_can_help_placeholder": "Cuéntanos cómo podemos ayudarte...",
         "text_8xc8x": ">",
         "thank_you_your_message_has_been_rec": "Gracias. Su mensaje ha sido recibido y el formulario ha sido borrado.",
         "theme_parks": "Parques Temáticos",
+        "animation_workshop": "Taller de animación",
         "we_d_love_to_hear_from_you_reach_ou": "Nos encantaría saber de usted. Comuníquese para consultas de prensa, oportunidades de asociación o preguntas generales."
     },
     "entertainment_animation": {
@@ -1864,7 +1870,12 @@ window.translations.es = {
         "virtual": "Virtual",
         "virtual_1": "<span class=\"badge badge-success\">Virtual</span>",
         "workshop": "Taller",
-        "workshop_register": "<span class=\"tag\">Taller</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Registrarse</a>"
+        "workshop_register": "<span class=\"tag\">Taller</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Registrarse</a>",
+        "event_info": "Información del evento",
+        "june_1_august_31_2025_stardust_king_clean": "1 de junio - 31 de agosto de 2025",
+        "stardust_kingdom_orlando": "Reino de Stardust, Orlando",
+        "update_notification": "Se le informará tan pronto como salgan nuevas actualizaciones.",
+        "close": "Cerrar"
     },
     "entertainment_merchandise": {
         "14_99": "$14.99",

@@ -30,6 +30,11 @@
             box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08);
             padding: 28px;
         }
+        [data-theme="dark"] .signup-panel,
+        [data-theme="dark"] .trial-summary {
+            background: #0f172a;
+            border-color: #0f172a;
+        }
 
         .trial-summary {
             position: sticky;
@@ -49,6 +54,9 @@
             font-size: 2rem;
             font-weight: 800;
             margin: 8px 0 4px;
+        }
+        [data-theme="dark"] .summary-price {
+            color: #f8fafc;
         }
 
         .summary-price span {
@@ -332,7 +340,6 @@
                 planSelect.value = initialPlan;
             }
             updateSummary(planSelect.value);
-
             planSelect.addEventListener('change', function () {
                 updateSummary(planSelect.value);
             });

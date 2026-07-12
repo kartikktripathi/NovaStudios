@@ -14,12 +14,56 @@
     toggle.addEventListener('click', function () {
         var isOpen = navbar.classList.toggle('nav-open');
         toggle.setAttribute('aria-expanded', isOpen);
+        if (!isOpen) {
+            // Reset submenu states when the main navigation menu is closed
+            var openSubmenus = navbar.querySelectorAll('.nav-links > li.submenu-open');
+            openSubmenus.forEach(function (li) {
+                li.classList.remove('submenu-open');
+            });
+        }
     });
 
-    // Close the menu after a navigation link is clicked
+    // Add has-submenu class to parent items and initialize toggle behavior
+    var itemsWithSubmenu = navbar.querySelectorAll('.nav-links > li');
+    itemsWithSubmenu.forEach(function (li) {
+        var megaMenu = li.querySelector('.mega-menu');
+        if (megaMenu) {
+            li.classList.add('has-submenu');
+            
+            var parentLink = li.querySelector('a');
+            if (parentLink) {
+                parentLink.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Close other submenus
+                        itemsWithSubmenu.forEach(function (otherLi) {
+                            if (otherLi !== li) {
+                                otherLi.classList.remove('submenu-open');
+                            }
+                        });
+                        
+                        // Toggle this submenu
+                        li.classList.toggle('submenu-open');
+                    }
+                });
+            }
+        }
+    });
+
+    // Close the menu after a navigation link is clicked (excluding parent submenu links on mobile)
     var links = navbar.querySelectorAll('.nav-links a');
     links.forEach(function (link) {
         link.addEventListener('click', function () {
+            var parentLi = link.closest('li');
+            var hasSubmenu = parentLi && parentLi.classList.contains('has-submenu');
+            
+            // If it's a submenu parent link on mobile, do not close the main menu
+            if (hasSubmenu && window.innerWidth <= 768) {
+                return;
+            }
+            
             navbar.classList.remove('nav-open');
             toggle.setAttribute('aria-expanded', 'false');
         });

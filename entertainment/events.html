@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head></head><body>﻿
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events — Nova Studios</title>
-    <meta name="description" content="Upcoming events, premieres, and fan experiences from Nova Studios.">
+    <title data-i18n="seo.entertainment_events_title">Events — Nova Studios</title>
+    <meta name="description" content="Upcoming events, premieres, and fan experiences from Nova Studios." data-i18n-content="seo.entertainment_events_desc">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/hero.css">
@@ -14,69 +14,133 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/utilities.css">
+    <style>
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: var(--card-bg, #ffffff);
+            border: 1px solid var(--border-color, #e5e7eb);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: var(--shadow-lg, 0 10px 25px rgba(0,0,0,0.15));
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            cursor: pointer;
+            color: var(--text-muted, #6b7280);
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary, #111827);
+        }
+
+        .notification-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--bg-secondary, #f8f9fa);
+            border-left: 4px solid var(--accent-color, #f59e0b);
+            border-radius: 4px;
+        }
+    </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../js/main.js"></script>
-</head>
-<body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+
+
+    <a href="#main" class="skip-link" data-i18n="entertainment_events.skip_to_main_content">Skip to main content</a>
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="navbar-brand"><span class="logo-text">NOVA<span class="logo-accent">STUDIOS</span></span></a>
+            <a href="../index.html" class="navbar-brand" data-i18n-html="navbar.novastudios"><span class="logo-text" data-i18n-html="navbar.novastudios_1">NOVA<span class="logo-accent" data-i18n="navbar.studios">STUDIOS</span></span></a>
             <ul class="nav-links">
                 <li>
-                    <a href="../about.html">About</a>
+                    <a href="../about.html" data-i18n="navbar.about">About</a>
                     <div class="mega-menu">
                         <div class="mega-menu-grid">
                             <div>
-                                <div class="mega-menu-header">Company</div>
-                                <a href="../about.html">About Us</a>
-                                <a href="../company/history.html">Our History</a>
-                                <a href="../company/leadership.html">Leadership</a>
-                                <a href="../company/careers.html">Careers</a>
+                                <div class="mega-menu-header" data-i18n="navbar.company">Company</div>
+                                <a href="../about.html" data-i18n="navbar.about_us">About Us</a>
+                                <a href="../company/history.html" data-i18n="navbar.our_history">Our History</a>
+                                <a href="../company/leadership.html" data-i18n="navbar.leadership">Leadership</a>
+                                <a href="../company/careers.html" data-i18n="navbar.careers">Careers</a>
                             </div>
                             <div>
-                                <div class="mega-menu-header">Info</div>
-                                <a href="../company/departments.html">Departments</a>
-                                <a href="../company/investors.html">Investors</a>
-                                <a href="../company/sustainability.html">Sustainability</a>
-                                <a href="../company/partnerships.html">Partnerships</a>
+                                <div class="mega-menu-header" data-i18n="navbar.info">Info</div>
+                                <a href="../company/departments.html" data-i18n="navbar.departments">Departments</a>
+                                <a href="../company/investors.html" data-i18n="navbar.investors">Investors</a>
+                                <a href="../company/sustainability.html" data-i18n="navbar.sustainability">Sustainability</a>
+                                <a href="../company/partnerships.html" data-i18n="navbar.partnerships">Partnerships</a>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <a href="../movies.html" class="active">Entertainment</a>
+                    <a href="../movies.html" class="active" data-i18n="navbar.entertainment">Entertainment</a>
                     <div class="mega-menu">
                         <div class="mega-menu-grid">
                             <div>
-                                <div class="mega-menu-header">Watch</div>
-                                <a href="../movies.html">Movies</a>
-                                <a href="../entertainment/tv-shows.html">TV Shows</a>
-                                <a href="../entertainment/animation.html">Animation</a>
-                                <a href="../entertainment/streaming.html">Nova+</a>
+                                <div class="mega-menu-header" data-i18n="navbar.watch">Watch</div>
+                                <a href="../movies.html" data-i18n="navbar.movies">Movies</a>
+                                <a href="../entertainment/tv-shows.html" data-i18n="navbar.tv_shows">TV Shows</a>
+                                <a href="../entertainment/animation.html" data-i18n="navbar.animation">Animation</a>
+                                <a href="../entertainment/streaming.html" data-i18n="navbar.nova">Nova+</a>
                             </div>
                             <div>
-                                <div class="mega-menu-header">Experience</div>
-                                <a href="../entertainment/theme-parks.html">Theme Parks</a>
-                                <a href="../entertainment/merchandise.html">Merchandise</a>
-                                <a href="../entertainment/events.html">Events</a>
-                                <a href="../media/gallery.html">Gallery</a>
+                                <div class="mega-menu-header" data-i18n="navbar.experience">Experience</div>
+                                <a href="../entertainment/theme-parks.html" data-i18n="navbar.theme_parks">Theme Parks</a>
+                                <a href="../entertainment/merchandise.html" data-i18n="navbar.merchandise">Merchandise</a>
+                                <a href="../entertainment/events.html" data-i18n="navbar.events">Events</a>
+                                <a href="../media/gallery.html" data-i18n="navbar.gallery">Gallery</a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a href="../news.html">News</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../awards.html">Awards</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li data-i18n-html="navbar.news_2"><a href="../news.html" data-i18n="navbar.news_1">News</a></li>
+                <li data-i18n-html="navbar.blog_2"><a href="../blog.html" data-i18n="navbar.blog_1">Blog</a></li>
+                <li data-i18n-html="navbar.awards_2"><a href="../awards.html" data-i18n="navbar.awards_1">Awards</a></li>
+                <li data-i18n-html="navbar.contact_2"><a href="../contact.html" data-i18n="navbar.contact_1">Contact</a></li>
             </ul>
             <div class="navbar-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                     </svg>
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
                 <button class="nav-toggle" aria-label="Toggle navigation">
@@ -90,9 +154,9 @@
 
     <section class="hero hero-compact hero-gradient-warm" id="main">
         <div class="container">
-            <div class="breadcrumbs"><a href="../index.html">Home</a> <span>&gt;</span> Events</div>
-            <h1>Events &amp; Experiences</h1>
-            <p>Join us at premieres, fan conventions, and exclusive events happening around the world.</p>
+            <div class="breadcrumbs" data-i18n-html="entertainment_events.home_events"><a href="../index.html" data-i18n="entertainment_events.home">Home</a> <span data-i18n="entertainment_events.text_cz26u">&gt;</span> Events</div>
+            <h1 data-i18n="entertainment_events.events_experiences">Events &amp; Experiences</h1>
+            <p data-i18n="entertainment_events.join_us_at_premieres_fan_convention">Join us at premieres, fan conventions, and exclusive events happening around the world.</p>
         </div>
     </section>
 
@@ -102,62 +166,62 @@
             <div class="container">
                 <div class="section-header">
                     <!-- ISSUE (Beginner): Poor text alignment — header is centered but event cards below are left-aligned -->
-                    <h2>Upcoming Events</h2>
-                    <p>Don't miss these upcoming Nova Studios events and experiences.</p>
+                    <h2 data-i18n="entertainment_events.upcoming_events">Upcoming Events</h2>
+                    <p data-i18n="entertainment_events.don_t_miss_these_upcoming_nova_stud">Don't miss these upcoming Nova Studios events and experiences.</p>
                 </div>
 
                 <div class="card-grid-2">
                     <!-- ISSUE (Intermediate): Duplicate IDs — both event cards use id="event" -->
                     <div class="card" id="event">
-                        <div class="placeholder-img accent card-img" style="height: 200px;">NovaFan Con 2025</div>
+                        <div class="placeholder-img accent card-img" style="height: 200px;" data-i18n="entertainment_events.novafan_con_2025">NovaFan Con 2025</div>
                         <div class="card-body">
-                            <span class="badge badge-accent">Fan Event</span>
-                            <h3 class="card-title" style="margin-top: 8px;">NovaFan Con 2025</h3>
-                            <p class="card-text">The ultimate Nova Studios fan convention returns to Los Angeles with exclusive panels, cast meet-and-greets, merchandise previews, and surprise announcements.</p>
-                            <div class="card-meta">📅 March 15-17, 2025 • 📍 LA Convention Center</div>
+                            <span class="badge badge-accent" data-i18n="entertainment_events.fan_event">Fan Event</span>
+                            <h3 class="card-title" style="margin-top: 8px;" data-i18n="entertainment_events.novafan_con_2025">NovaFan Con 2025</h3>
+                            <p class="card-text" data-i18n="entertainment_events.the_ultimate_nova_studios_fan_conve">The ultimate Nova Studios fan convention returns to Los Angeles with exclusive panels, cast meet-and-greets, merchandise previews, and surprise announcements.</p>
+                            <div class="card-meta" data-i18n="entertainment_events.march_15_17_2025_la_convention_cent">📅 March 15-17, 2025 • 📍 LA Convention Center</div>
                         </div>
-                        <div class="card-footer-section">
-                            <span class="tag">Fan Convention</span>
-                            <a href="#" class="btn btn-sm btn-accent">Get Tickets</a>
+                        <div class="card-footer-section" data-i18n-html="entertainment_events.fan_convention_get_tickets">
+                            <span class="tag" data-i18n="entertainment_events.fan_convention">Fan Convention</span>
+                            <a href="#" class="btn btn-sm btn-accent" data-i18n="entertainment_events.get_tickets">Get Tickets</a>
                         </div>
                     </div>
                     <div class="card" id="event">
-                        <div class="placeholder-img dark card-img" style="height: 200px;">The Last Kingdom Premiere</div>
+                        <div class="placeholder-img dark card-img" style="height: 200px;" data-i18n="entertainment_events.the_last_kingdom_premiere">The Last Kingdom Premiere</div>
                         <div class="card-body">
-                            <span class="badge badge-primary">Premiere</span>
-                            <h3 class="card-title" style="margin-top: 8px;">The Last Kingdom — World Premiere</h3>
-                            <p class="card-text">Be among the first to experience our latest fantasy epic on the big screen, followed by a Q&A with the director and cast.</p>
-                            <div class="card-meta">📅 February 1, 2025 • 📍 TCL Chinese Theatre, Hollywood</div>
+                            <span class="badge badge-primary" data-i18n="entertainment_events.premiere">Premiere</span>
+                            <h3 class="card-title" style="margin-top: 8px;" data-i18n="entertainment_events.the_last_kingdom_world_premiere">The Last Kingdom — World Premiere</h3>
+                            <p class="card-text" data-i18n="entertainment_events.be_among_the_first_to_experience_ou">Be among the first to experience our latest fantasy epic on the big screen, followed by a Q&amp;A with the director and cast.</p>
+                            <div class="card-meta" data-i18n="entertainment_events.february_1_2025_tcl_chinese_theatre">📅 February 1, 2025 • 📍 TCL Chinese Theatre, Hollywood</div>
                         </div>
-                        <div class="card-footer-section">
-                            <span class="tag">Film Premiere</span>
-                            <a href="#" class="btn btn-sm btn-primary">RSVP</a>
+                        <div class="card-footer-section" data-i18n-html="entertainment_events.film_premiere_rsvp">
+                            <span class="tag" data-i18n="entertainment_events.film_premiere">Film Premiere</span>
+                            <a href="#" class="btn btn-sm btn-primary" data-i18n="entertainment_events.rsvp">RSVP</a>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="placeholder-img blue card-img" style="height: 200px;">Animation Workshop</div>
+                        <div class="placeholder-img blue card-img" style="height: 200px;" data-i18n="entertainment_events.animation_workshop">Animation Workshop</div>
                         <div class="card-body">
-                            <span class="badge badge-primary">Workshop</span>
-                            <h3 class="card-title" style="margin-top: 8px;">Animation Masterclass with Nova Animators</h3>
-                            <p class="card-text">A two-day intensive workshop led by senior Nova animators, covering character design, storyboarding, and the NovaEngine workflow.</p>
-                            <div class="card-meta">📅 April 5-6, 2025 • 📍 Nova Studios, San Francisco</div>
+                            <span class="badge badge-primary" data-i18n="entertainment_events.workshop">Workshop</span>
+                            <h3 class="card-title" style="margin-top: 8px;" data-i18n="entertainment_events.animation_masterclass_with_nova_ani">Animation Masterclass with Nova Animators</h3>
+                            <p class="card-text" data-i18n="entertainment_events.a_two_day_intensive_workshop_led_by">A two-day intensive workshop led by senior Nova animators, covering character design, storyboarding, and the NovaEngine workflow.</p>
+                            <div class="card-meta" data-i18n="entertainment_events.april_5_6_2025_nova_studios_san_fra">📅 April 5-6, 2025 • 📍 Nova Studios, San Francisco</div>
                         </div>
-                        <div class="card-footer-section">
-                            <span class="tag">Workshop</span>
-                            <a href="#" class="btn btn-sm btn-primary">Register</a>
+                        <div class="card-footer-section" data-i18n-html="entertainment_events.workshop_register">
+                            <span class="tag" data-i18n="entertainment_events.workshop">Workshop</span>
+                            <a href="#" class="btn btn-sm btn-primary" data-i18n="entertainment_events.register">Register</a>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="placeholder-img purple card-img" style="height: 200px;">Stardust Summer Festival</div>
+                        <div class="placeholder-img purple card-img" style="height: 200px;" data-i18n="entertainment_events.stardust_summer_festival">Stardust Summer Festival</div>
                         <div class="card-body">
-                            <span class="badge badge-success">Seasonal</span>
-                            <h3 class="card-title" style="margin-top: 8px;">Stardust Summer Festival</h3>
-                            <p class="card-text">Our annual summer celebration at Stardust Kingdom features live performances, fireworks, limited-edition food, and special character appearances.</p>
-                            <div class="card-meta">📅 June 1 - August 31, 2025 • 📍 Stardust Kingdom, Orlando</div>
+                            <span class="badge badge-success" data-i18n="entertainment_events.seasonal">Seasonal</span>
+                            <h3 class="card-title" style="margin-top: 8px;" data-i18n="entertainment_events.stardust_summer_festival">Stardust Summer Festival</h3>
+                            <p class="card-text" data-i18n="entertainment_events.our_annual_summer_celebration_at_st">Our annual summer celebration at Stardust Kingdom features live performances, fireworks, limited-edition food, and special character appearances.</p>
+                            <div class="card-meta" data-i18n="entertainment_events.june_1_august_31_2025_stardust_king">📅 June 1 - August 31, 2025 • 📍 Stardust Kingdom, Orlando</div>
                         </div>
-                        <div class="card-footer-section">
-                            <span class="tag">Theme Park</span>
-                            <a href="#" class="btn btn-sm btn-accent">Learn More</a>
+                        <div class="card-footer-section" data-i18n-html="entertainment_events.theme_park_learn_more">
+                            <span class="tag" data-i18n="entertainment_events.theme_park">Theme Park</span>
+                            <a href="#" class="btn btn-sm btn-accent" data-i18n="entertainment_events.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -167,41 +231,41 @@
         <!-- Past Events Table -->
         <section class="section section-alt">
             <div class="container">
-                <h2>Past Events</h2>
-                <p class="text-muted mb-3">A look back at our recent events and experiences.</p>
+                <h2 data-i18n="entertainment_events.past_events">Past Events</h2>
+                <p class="text-muted mb-3" data-i18n="entertainment_events.a_look_back_at_our_recent_events_an">A look back at our recent events and experiences.</p>
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Event</th>
-                            <th>Date</th>
-                            <th>Location</th>
-                            <th>Type</th>
+                            <th data-i18n="entertainment_events.event">Event</th>
+                            <th data-i18n="entertainment_events.date">Date</th>
+                            <th data-i18n="entertainment_events.location">Location</th>
+                            <th data-i18n="entertainment_events.type">Type</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Stellar Horizon World Premiere</td>
-                            <td>December 10, 2024</td>
-                            <td>London, UK</td>
-                            <td><span class="badge badge-primary">Premiere</span></td>
+                            <td data-i18n="entertainment_events.stellar_horizon_world_premiere">Stellar Horizon World Premiere</td>
+                            <td data-i18n="entertainment_events.december_10_2024">December 10, 2024</td>
+                            <td data-i18n="entertainment_events.london_uk">London, UK</td>
+                            <td data-i18n-html="entertainment_events.premiere_1"><span class="badge badge-primary" data-i18n="entertainment_events.premiere">Premiere</span></td>
                         </tr>
                         <tr>
-                            <td>NovaFan Con 2024</td>
-                            <td>March 20-22, 2024</td>
-                            <td>Los Angeles, CA</td>
-                            <td><span class="badge badge-accent">Convention</span></td>
+                            <td data-i18n="entertainment_events.novafan_con_2024">NovaFan Con 2024</td>
+                            <td data-i18n="entertainment_events.march_20_22_2024">March 20-22, 2024</td>
+                            <td data-i18n="entertainment_events.los_angeles_ca">Los Angeles, CA</td>
+                            <td data-i18n-html="entertainment_events.convention"><span class="badge badge-accent" data-i18n="entertainment_events.convention_1">Convention</span></td>
                         </tr>
                         <tr>
-                            <td>Ashenmoor S4 Watch Party</td>
-                            <td>October 12, 2024</td>
-                            <td>Virtual</td>
-                            <td><span class="badge badge-success">Virtual</span></td>
+                            <td data-i18n="entertainment_events.ashenmoor_s4_watch_party">Ashenmoor S4 Watch Party</td>
+                            <td data-i18n="entertainment_events.october_12_2024">October 12, 2024</td>
+                            <td data-i18n="entertainment_events.virtual">Virtual</td>
+                            <td data-i18n-html="entertainment_events.virtual_1"><span class="badge badge-success" data-i18n="entertainment_events.virtual">Virtual</span></td>
                         </tr>
                         <tr>
-                            <td>Tokyo Park Groundbreaking</td>
-                            <td>November 1, 2024</td>
-                            <td>Tokyo, Japan</td>
-                            <td><span class="badge badge-primary">Corporate</span></td>
+                            <td data-i18n="entertainment_events.tokyo_park_groundbreaking">Tokyo Park Groundbreaking</td>
+                            <td data-i18n="entertainment_events.november_1_2024">November 1, 2024</td>
+                            <td data-i18n="entertainment_events.tokyo_japan">Tokyo, Japan</td>
+                            <td data-i18n-html="entertainment_events.corporate"><span class="badge badge-primary" data-i18n="entertainment_events.corporate_1">Corporate</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -212,16 +276,90 @@
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
-                <div class="footer-brand"><span class="logo-text">NOVA<span class="logo-accent">STUDIOS</span></span></div>
-                <p>Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
+                <div class="footer-brand" data-i18n-html="footer.novastudios"><span class="logo-text" data-i18n-html="footer.novastudios_1">NOVA<span class="logo-accent" data-i18n="footer.studios">STUDIOS</span></span></div>
+                <p data-i18n="footer.nova_studios_is_a_global_entertainm">Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
                 <div class="footer-social"><a href="https://facebook.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a><a href="https://twitter.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a><a href="https://instagram.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://youtube.com/@NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a><a href="https://linkedin.com/company/novastudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></div>
             </div>
-            <div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About Us</a></li><li><a href="../company/careers.html">Careers</a></li><li><a href="../news.html">News</a></li><li><a href="../company/investors.html">Investors</a></li></ul></div>
-            <div class="footer-col"><h3>Entertainment</h3><ul><li><a href="../movies.html">Movies</a></li><li><a href="tv-shows.html">TV Shows</a></li><li><a href="streaming.html">Nova+</a></li><li><a href="theme-parks.html">Theme Parks</a></li></ul></div>
-            <div class="footer-col"><h3>Support</h3><ul><li><a href="../support/help.html">Help Center</a></li><li><a href="../contact.html">Contact Us</a></li><li><a href="../support/faq.html">FAQ</a></li><li><a href="../legal/privacy.html">Privacy</a></li></ul></div>
+            <div class="footer-col"><h3 data-i18n="footer.company">Company</h3><ul><li data-i18n-html="footer.about_us_2"><a href="../about.html" data-i18n="footer.about_us_1">About Us</a></li><li data-i18n-html="footer.careers_2"><a href="../company/careers.html" data-i18n="footer.careers_1">Careers</a></li><li data-i18n-html="footer.news_2"><a href="../news.html" data-i18n="footer.news_1">News</a></li><li data-i18n-html="footer.investors_2"><a href="../company/investors.html" data-i18n="footer.investors_1">Investors</a></li></ul></div>
+            <div class="footer-col"><h3 data-i18n="footer.entertainment">Entertainment</h3><ul><li data-i18n-html="footer.movies_2"><a href="../movies.html" data-i18n="footer.movies_1">Movies</a></li><li data-i18n-html="footer.tv_shows_5"><a href="tv-shows.html" data-i18n="footer.tv_shows_1">TV Shows</a></li><li data-i18n-html="footer.nova_5"><a href="streaming.html" data-i18n="footer.nova_1">Nova+</a></li><li data-i18n-html="footer.theme_parks_5"><a href="theme-parks.html" data-i18n="footer.theme_parks_1">Theme Parks</a></li></ul></div>
+            <div class="footer-col"><h3 data-i18n="footer.support">Support</h3><ul><li data-i18n-html="footer.help_center_2"><a href="../support/help.html" data-i18n="footer.help_center_1">Help Center</a></li><li data-i18n-html="footer.contact_us_2"><a href="../contact.html" data-i18n="footer.contact_us_1">Contact Us</a></li><li data-i18n-html="footer.faq_2"><a href="../support/faq.html" data-i18n="footer.faq_1">FAQ</a></li><li data-i18n-html="footer.privacy_1"><a href="../legal/privacy.html" data-i18n="footer.privacy">Privacy</a></li></ul></div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2026 Nova Studios. All rights reserved.</p><div class="footer-bottom-links"><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/accessibility-page.html">Accessibility</a></div></div>
+        <div class="footer-bottom"><p data-i18n="footer.2026_nova_studios_all_rights_reserv">© 2026 Nova Studios. All rights reserved.</p><div class="footer-bottom-links" data-i18n-html="footer.privacytermsaccessibility"><a href="../legal/privacy.html" data-i18n="footer.privacy">Privacy</a><a href="../legal/terms.html" data-i18n="footer.terms">Terms</a><a href="../legal/accessibility-page.html" data-i18n="footer.accessibility">Accessibility</a></div></div>
     </footer>
-<script src="../js/nav.js"></script></body>
-</html>
+<script src="../js/nav.js"></script>
 
+    <!-- Stardust Festival Modal -->
+    <div id="festival-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-festival-modal" class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="badge badge-success" data-i18n="entertainment_events.seasonal">Seasonal</span>
+                <h2 id="modal-title" style="margin-top: 10px;" data-i18n="entertainment_events.stardust_summer_festival">Stardust Summer Festival</h2>
+            </div>
+            <div class="modal-body" style="text-align: left; margin-top: 20px;">
+                <p style="font-weight: 600; color: var(--text-primary);" data-i18n="entertainment_events.event_info">Event Information:</p>
+                <p data-i18n="entertainment_events.our_annual_summer_celebration_at_st">Our annual summer celebration at Stardust Kingdom features live performances, fireworks, limited-edition food, and special character appearances.</p>
+                <p style="margin-top: 10px;"><strong>📅 <span data-i18n="entertainment_events.date">Date</span>:</strong> <span data-i18n="entertainment_events.june_1_august_31_2025_stardust_king_clean">June 1 - August 31, 2025</span></p>
+                <p><strong>📍 <span data-i18n="entertainment_events.location">Location</span>:</strong> <span data-i18n="entertainment_events.stardust_kingdom_orlando">Stardust Kingdom, Orlando</span></p>
+                <div class="notification-box">
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary);" data-i18n="entertainment_events.update_notification">You will be updated as soon as new updates are out.</p>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-top: 30px; text-align: right;">
+                <button id="close-festival-modal-btn" class="btn btn-primary" data-i18n="entertainment_events.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('festival-modal');
+            const closeBtn = document.getElementById('close-festival-modal');
+            const closeBtn2 = document.getElementById('close-festival-modal-btn');
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+            if (closeBtn2) {
+                closeBtn2.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Event Delegation for upcoming events buttons
+            document.addEventListener('click', function (e) {
+                const btn = e.target.closest('.btn');
+                if (!btn) return;
+
+                const footer = btn.closest('.card-footer-section');
+                if (!footer) return;
+
+                const i18nKey = footer.getAttribute('data-i18n-html');
+                if (!i18nKey) return;
+
+                if (i18nKey === 'entertainment_events.fan_convention_get_tickets') {
+                    e.preventDefault();
+                    window.location.href = '../booking/booking.html?park=novafan';
+                } else if (i18nKey === 'entertainment_events.film_premiere_rsvp') {
+                    e.preventDefault();
+                    window.location.href = '../booking/booking.html?park=premiere';
+                } else if (i18nKey === 'entertainment_events.workshop_register') {
+                    e.preventDefault();
+                    window.location.href = '../contact.html?subject=workshop';
+                } else if (i18nKey === 'entertainment_events.theme_park_learn_more') {
+                    e.preventDefault();
+                    if (modal) {
+                        modal.style.display = 'flex';
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>

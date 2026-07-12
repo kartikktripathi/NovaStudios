@@ -3,9 +3,10 @@
  * Handles Light/Dark mode settings, localStorage persistence, and mobile menu toggling.
  */
 
-// 1. Immediate Execution (Pre-render) to prevent Flash of Unstyled Content (FOUC)
+// 1. Immediate Execution (Pre-render) to prevent Flash of Unstyled Content (FOUC) and bootstrap i18n
 (function () {
     try {
+        // Theme config
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark' || savedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -14,8 +15,40 @@
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
         }
+
+        // Prevent duplicate script injection
+        if (window.i18nScriptsInjected) return;
+        window.i18nScriptsInjected = true;
+
+        // Determine base path relative to main.js script source
+        let basePath = '';
+        if (document.currentScript) {
+            basePath = document.currentScript.src.replace(/js\/main\.js$/, '');
+        } else {
+            const scripts = document.getElementsByTagName('script');
+            for (let script of scripts) {
+                if (script.src && script.src.endsWith('js/main.js')) {
+                    basePath = script.src.replace(/js\/main\.js$/, '');
+                    break;
+                }
+            }
+        }
+
+        // Load translations and i18n script dynamically in order (async = false)
+        const scriptsToLoad = [
+            'js/translations/en.js',
+            'js/translations/es.js',
+            'js/i18n.js'
+        ];
+
+        scriptsToLoad.forEach(src => {
+            const s = document.createElement('script');
+            s.src = basePath + src;
+            s.async = false;
+            document.head.appendChild(s);
+        });
     } catch (e) {
-        console.error('Failed to parse saved theme settings', e);
+        console.error('Failed to initialize theme and internationalization settings', e);
     }
 })();
 

@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.classList.add('active');
 
       var selected = btn.textContent.trim();
+      var i18nKey = btn.getAttribute('data-i18n') || '';
+      var isAll = i18nKey.endsWith('.all') || selected === 'All';
 
       Array.prototype.forEach.call(cards, function (card) {
         var genreEl = card.querySelector('.genre');
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
 
-        var show = selected === 'All' || genre === selected;
+        var show = isAll || genre === selected;
         card.style.display = show ? '' : 'none';
       });
     });

@@ -2740,7 +2740,21 @@ window.translations.es = {
         "verify_that_your_payment_details_are_correct": "Verifica que los datos de tu pago sean correctos y que tu método de pago tenga fondos suficientes. Si el problema persiste, prueba con otro método de pago o ponte en contacto con tu entidad financiera.",
 
         "can_i_request_a_refund": "¿Puedo solicitar un reembolso? <span>+</span>",
-        "refund_eligibility_depends_on_the_product": "La elegibilidad para un reembolso depende del producto o servicio adquirido y de la política de reembolso correspondiente. Consulta los términos en el momento de la compra o ponte en contacto con nuestro equipo de soporte para obtener ayuda."
+        "refund_eligibility_depends_on_the_product": "La elegibilidad para un reembolso depende del producto o servicio adquirido y de la política de reembolso correspondiente. Consulta los términos en el momento de la compra o ponte en contacto con nuestro equipo de soporte para obtener ayuda.",
+        "account_security": "Cuenta y Seguridad",
+
+        "why_should_i_create_a_nova_account": "¿Por qué debería crear una cuenta de Nova Studios? <span>+</span>",
+        "creating_a_nova_studios_account_allows_you": "Crear una cuenta de Nova Studios te permite comprar entradas para los parques temáticos, administrar tus reservas, acceder a los servicios de Nova+ y disfrutar de una experiencia más personalizada en nuestra plataforma.",
+
+        "is_my_personal_information_secure": "¿Está segura mi información personal? <span>+</span>",
+        "we_take_the_security_of_your_personal_information_seriously": "Sí. Nos tomamos muy en serio la seguridad de tu información personal y utilizamos prácticas de seguridad estándar de la industria para ayudar a proteger tu cuenta y tus datos personales. También te recomendamos mantener privadas tus credenciales de inicio de sesión y utilizar una contraseña segura.",
+
+        "can_i_change_the_email_address_associated_with_my_account": "¿Puedo cambiar la dirección de correo electrónico asociada a mi cuenta? <span>+</span>",
+        "if_account_management_features_are_available": "Sí. Si las funciones de administración de la cuenta están disponibles, puedes actualizar tu dirección de correo electrónico desde la configuración de tu cuenta. Si tienes algún problema, ponte en contacto con nuestro equipo de soporte para obtener ayuda.",
+
+        "why_am_i_required_to_create_an_account_before_purchasing_theme_park_tickets": "¿Por qué debo crear una cuenta antes de comprar entradas para los parques temáticos? <span>+</span>",
+        "creating_an_account_helps_us_securely_manage_your_ticket_purchases": "Crear una cuenta nos ayuda a gestionar de forma segura la compra de tus entradas, almacenar la información de tus reservas y facilitar el acceso o la administración de tus reservas en el futuro."
+
     },
     "support_help": {
         "account_security": "Cuenta y seguridad",

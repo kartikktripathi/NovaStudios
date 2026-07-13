@@ -2742,7 +2742,21 @@ window.translations.en = {
         "can_i_request_a_refund": "Can I request a refund? <span>+</span>",
         "refund_eligibility_depends_on_the_product": "Refund eligibility depends on the product or service purchased and the applicable refund policy. Please review the terms at the time of purchase or contact our support team for assistance.",
 
-        "you_can_cancel_your_nova_subscripti": "You can cancel your Nova+ subscription at any time through your account settings. Your access will continue until the end of your current billing period. No cancellation fees apply."
+        "you_can_cancel_your_nova_subscripti": "You can cancel your Nova+ subscription at any time through your account settings. Your access will continue until the end of your current billing period. No cancellation fees apply.",
+        "account_security": "Account & Security",
+
+        "why_should_i_create_a_nova_account": "Why should I create a Nova Studios account? <span>+</span>",
+        "creating_a_nova_studios_account_allows_you": "Creating a Nova Studios account allows you to purchase theme park tickets, manage your bookings, access Nova+ services, and enjoy a more personalized experience across our platform.",
+
+        "is_my_personal_information_secure": "Is my personal information secure? <span>+</span>",
+        "we_take_the_security_of_your_personal_information_seriously": "Yes. We take the security of your personal information seriously and use industry-standard security practices to help protect your account and personal data. We also recommend keeping your login credentials private and using a strong password.",
+
+        "can_i_change_the_email_address_associated_with_my_account": "Can I change the email address associated with my account? <span>+</span>",
+        "if_account_management_features_are_available": "Yes. If account management features are available, you can update your email address through your account settings. If you experience any issues, please contact our support team for assistance.",
+
+        "why_am_i_required_to_create_an_account_before_purchasing_theme_park_tickets": "Why am I required to create an account before purchasing theme park tickets? <span>+</span>",
+        "creating_an_account_helps_us_securely_manage_your_ticket_purchases": "Creating an account helps us securely manage your ticket purchases, store your booking information, and make it easier to access or manage your reservations in the future."
+
     },
     "support_help": {
         "account_security": "Account &amp; Security",

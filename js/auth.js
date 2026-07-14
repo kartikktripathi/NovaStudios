@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const signupForm = document.getElementById("signupForm");
-    const toggle = document.getElementById("togglePassword");
+    const toggle =
+    document.getElementById("togglePassword") ||
+    document.getElementById("signupPasswordToggle");
     const createLink = document.getElementById("createAccountLink");
 
     const passwordInput =

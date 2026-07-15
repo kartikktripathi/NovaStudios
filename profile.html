@@ -132,7 +132,14 @@
             <div class="navbar-actions">
                 <a href="auth/login.html" class="navbar-login">Log In</a>
                 <a href="auth/signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+                <a href="profile.html" class="navbar-profile-icon" aria-label="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+                    </svg>
+                </a>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                     </svg>
@@ -152,7 +159,7 @@
     <section class="hero hero-compact hero-gradient-blue" id="main">
         <div class="container">
             <div class="breadcrumbs"><a href="index.html">Home</a> &gt; My Profile</div>
-            <h1>My Profile</h1>
+            <h1>Hello, <span id="user-greeting-name">Guest</span>!</h1>
             <p>Manage your account details, watch history, and favorites.</p>
         </div>
     </section>
@@ -228,8 +235,27 @@
     </footer>
 
     <script src="js/nav.js"></script>
-    <script>
+        <script>
         (function () {
+            // Get the user's logged-in session details
+            var sessionData = sessionStorage.getItem('novaPlusSession');
+            if (sessionData) {
+                var session = JSON.parse(sessionData);
+                if (session && session.authenticated && session.name) {
+                    // 1. Update the greeting with the user's name
+                    var greetingName = document.getElementById('user-greeting-name');
+                    if (greetingName) {
+                        greetingName.textContent = session.name;
+                    }
+                    // 2. Pre-fill the email field with their logged-in email
+                    var emailInput = document.getElementById('email');
+                    if (emailInput && session.email) {
+                        emailInput.value = session.email;
+                    }
+                }
+            }
+
+            // Keep the form submit behavior
             var form = document.getElementById('profile-form');
             var status = document.getElementById('profile-status');
             form.addEventListener('submit', function (event) {
@@ -238,6 +264,7 @@
             });
         })();
     </script>
+
 
 
 </body></html>

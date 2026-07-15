@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    updateAuthNav();
 
     // Initialize floating "Back to Top" button
     initBackToTop();
@@ -121,4 +122,44 @@
             btn.classList.remove('visible');
         }
     }
+function updateAuthNav() {
+    var isLoggedIn = false;
+    try {
+        var session = sessionStorage.getItem('novaPlusSession');
+        isLoggedIn = !!session && JSON.parse(session).authenticated === true;
+    } catch (e) {
+        isLoggedIn = false;
+    }
+
+    // 1. Toggle Login and Sign Up buttons (hidden if logged in, shown if logged out)
+    document.querySelectorAll('.navbar-actions .navbar-login, .navbar-actions .btn-accent').forEach(function (el) {
+        el.style.display = isLoggedIn ? 'none' : '';
+    });
+
+    // 2. Handle Profile Icon link and visibility
+    var loginEl = document.querySelector('.navbar-actions .navbar-login');
+    document.querySelectorAll('.navbar-actions .navbar-profile-icon').forEach(function (profileIconEl) {
+        // The Profile Icon is ALWAYS shown now
+        profileIconEl.style.display = '';
+
+        // Save the original profile link (e.g. "profile.html" or "../../profile.html")
+        // so we can switch back to it when the user logs in
+        if (!profileIconEl.dataset.originalHref) {
+            profileIconEl.dataset.originalHref = profileIconEl.getAttribute('href') || 'profile.html';
+        }
+
+        if (isLoggedIn) {
+            // Logged in: Profile icon links to the profile page
+            profileIconEl.setAttribute('href', profileIconEl.dataset.originalHref);
+        } else {
+            // Logged out: Profile icon links to the login page
+            // We copy the exact path from the Login button so it works in subdirectories too!
+            if (loginEl) {
+                profileIconEl.setAttribute('href', loginEl.getAttribute('href'));
+            } else {
+                profileIconEl.setAttribute('href', 'auth/login.html'); // Fallback
+            }
+        }
+    });
+}
 })();

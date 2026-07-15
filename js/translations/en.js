@@ -392,7 +392,7 @@ window.translations.en = {
         "quantity_1_1": "<span>Quantity</span>\n                        <strong id=\"summary-qty\">1</strong>",
         "select_a_date": "Select a date",
         "select_theme_park": "Select Theme Park",
-        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Select Theme Park</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Choose a Park --</option>\n                            <option value=\"orlando\">Stardust Kingdom — Orlando, FL</option>\n                            <option value=\"paris\">Nova World — Paris, France</option>\n                            <option value=\"shanghai\">Dreamscape — Shanghai, China</option>\n                            <option value=\"sydney\">Adventure Isles — Sydney, Australia</option>\n                        </select>",
+        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Select Theme Park</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Choose a Park --</option>\n                            <option value=\"orlando\">Stardust Kingdom — Orlando, FL</option>\n                            <option value=\"paris\">Nova World — Paris, France</option>\n                            <option value=\"shanghai\">Dreamscape — Shanghai, China</option>\n                            <option value=\"sydney\">Adventure Isles — Sydney, Australia</option>\n                            <option value=\"novafan\">NovaFan Con 2025</option>\n                            <option value=\"premiere\">The Last Kingdom — World Premiere</option>\n                        </select>",
         "select_ticket_type": "Select Ticket Type",
         "select_visit_date": "<label for=\"visit-date\">Select Visit Date</label>\n                        <input type=\"date\" id=\"visit-date\" class=\"form-control\" required=\"\">",
         "select_visit_date_1": "Select Visit Date",
@@ -407,7 +407,12 @@ window.translations.en = {
         "total_inc_tax": "Total (inc. Tax)",
         "total_inc_tax_106_92": "<span>Total (inc. Tax)</span>\n                        <strong id=\"summary-total\">$106.92</strong>",
         "unlimited_entry_to_all_domestic_par": "Unlimited entry to all domestic parks for 365 days.",
-        "your_ticket_reservation_has_been_su": "Your ticket reservation has been successfully completed. A confirmation email with details and barcodes has been sent to your address."
+        "your_ticket_reservation_has_been_su": "Your ticket reservation has been successfully completed. A confirmation email with details and barcodes has been sent to your address.",
+        "novafan_con_2025": "NovaFan Con 2025",
+        "the_last_kingdom_world_premiere": "The Last Kingdom — World Premiere",
+        "invalid_date": "Invalid Date",
+        "select_upcoming_dates": "Select upcoming dates",
+        "ok": "OK"
     },
     "common": {},
     "company_careers": {
@@ -813,11 +818,12 @@ window.translations.en = {
         "send_us_a_message": "Send Us a Message",
         "skip_to_main_content": "Skip to main content",
         "subject": "Subject",
-        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Subject</label>\n                                <select id=\"subject\" name=\"subject\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Select a topic...</option>\n                                    <option value=\"press\">Press Inquiry</option>\n                                    <option value=\"partnership\">Partnership</option>\n                                    <option value=\"careers\">Careers</option>\n                                    <option value=\"streaming\">Nova+ Support</option>\n                                    <option value=\"parks\">Theme Parks</option>\n                                    <option value=\"general\">General Question</option>\n                                </select>",
+        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Subject</label>\n                                <select id=\"subject\" name=\"subject\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Select a topic...</option>\n                                    <option value=\"press\">Press Inquiry</option>\n                                    <option value=\"partnership\">Partnership</option>\n                                    <option value=\"careers\">Careers</option>\n                                    <option value=\"streaming\">Nova+ Support</option>\n                                    <option value=\"parks\">Theme Parks</option>\n                                    <option value=\"workshop\">Animation Workshop</option>\n                                    <option value=\"general\">General Question</option>\n                                </select>",
         "tell_us_how_we_can_help_placeholder": "Tell us how we can help...",
         "text_8xc8x": "&gt;",
         "thank_you_your_message_has_been_rec": "Thank you. Your message has been received and the form has been cleared.",
         "theme_parks": "Theme Parks",
+        "animation_workshop": "Animation Workshop",
         "we_d_love_to_hear_from_you_reach_ou": "We'd love to hear from you. Reach out for press inquiries, partnership opportunities, or general questions."
     },
     "entertainment_animation": {
@@ -1803,6 +1809,84 @@ window.translations.en = {
         "writer_nathan_price_grace_holloway": "<strong>Writer:</strong> Nathan Price, Grace Holloway",
         "you_might_also_like": "You Might Also Like"
     },
+    "entertainment_details_tv-show-chronicles-of-ashenmoor": {
+        "title": "Chronicles of Ashenmoor",
+        "meta": "<span class=\"meta-item\">4 Seasons</span>\n                            <span class=\"meta-item\">Fantasy</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 9.4 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "An epic fantasy series set in a world where magic is fading and kingdoms collide in a war for survival.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> J.R.R. Martin</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Ramin Djawadi</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> October 15, 2018</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Ongoing</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> Chronicles of Ashenmoor"
+    },
+    "entertainment_details_tv-show-signal-lost": {
+        "title": "Signal Lost",
+        "meta": "<span class=\"meta-item\">2 Seasons</span>\n                            <span class=\"meta-item\">Sci-Fi</span>\n                            <span class=\"meta-item\">TV-14</span>",
+        "rating": "★ 8.5 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "A mysterious signal from deep space triggers a chain of events that threatens civilization as we know it. A group of astronomers and scientists race against time to decode the transmission before it is too late.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> Marcus Vale</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Helena Vogt</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> January 15, 2024</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Ongoing</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> Signal Lost"
+    },
+    "entertainment_details_tv-show-the-golden-hour": {
+        "title": "The Golden Hour",
+        "meta": "<span class=\"meta-item\">3 Seasons</span>\n                            <span class=\"meta-item\">Drama</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 8.8 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Inside a prestigious trauma center, a team of surgeons face impossible choices under extreme pressure. Every second counts as they navigate the chaotic boundary between life and death.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> Diane Moreau</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Rajesh Kapoor</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> September 5, 2022</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Ongoing</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> The Golden Hour"
+    },
+    "entertainment_details_tv-show-wild-planet": {
+        "title": "Wild Planet",
+        "meta": "<span class=\"meta-item\">5 Seasons</span>\n                            <span class=\"meta-item\">Documentary</span>\n                            <span class=\"meta-item\">TV-G</span>",
+        "rating": "★ 9.3 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "A landmark documentary series exploring the most remote and extraordinary ecosystems on Earth. Filmed over five years across fifty countries, capturing nature as it has never been seen before.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> David Atten</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> April 22, 2020</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+ / Broadcast</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Ongoing</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> Wild Planet"
+    },
+    "entertainment_details_tv-show-the-playwright": {
+        "title": "The Playwright",
+        "meta": "<span class=\"meta-item\">1 Season</span>\n                            <span class=\"meta-item\">Drama</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 8.6 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "A struggling writer in 1920s New York discovers that her plays have the power to reshape reality. As her creations begin to manifest in the real world, she must face the consequences of playing God.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> Victor Lang</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> November 10, 2025</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Completed</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> The Playwright"
+    },
+    "entertainment_details_tv-show-laugh-track": {
+        "title": "Laugh Track",
+        "meta": "<span class=\"meta-item\">2 Seasons</span>\n                            <span class=\"meta-item\">Comedy</span>\n                            <span class=\"meta-item\">TV-14</span>",
+        "rating": "★ 8.2 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "A behind-the-scenes comedy about the chaotic production of a late-night talk show. From eccentric guests to temperamental writers, see the madness that goes into making the world laugh.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Watch on Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secondary\">Watch Trailer</a>",
+        "tabs": "<button class=\"movie-tab active\">Cast &amp; Crew</button>\n                    <button class=\"movie-tab\">Details</button>\n                    <button class=\"movie-tab\">Reviews</button>",
+        "cast_header": "Cast",
+        "crew_header": "Crew",
+        "details_row1": "<span class=\"meta-item\"><strong>Creator:</strong> Amara Okafor</span>\n                        <span class=\"meta-item\"><strong>Composer:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Premiere:</strong> June 1, 2024</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Network:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Status:</strong> Ongoing</span>\n                        <span class=\"meta-item\"><strong>Language:</strong> English</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Home</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">TV Shows</a> <span>&gt;</span> Laugh Track"
+    },
     "entertainment_events": {
         "a_look_back_at_our_recent_events_an": "A look back at our recent events and experiences.",
         "a_two_day_intensive_workshop_led_by": "A two-day intensive workshop led by senior Nova animators, covering character design, storyboarding, and the NovaEngine workflow.",
@@ -1864,7 +1948,12 @@ window.translations.en = {
         "virtual": "Virtual",
         "virtual_1": "<span class=\"badge badge-success\">Virtual</span>",
         "workshop": "Workshop",
-        "workshop_register": "<span class=\"tag\">Workshop</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Register</a>"
+        "workshop_register": "<span class=\"tag\">Workshop</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Register</a>",
+        "event_info": "Event Information",
+        "june_1_august_31_2025_stardust_king_clean": "June 1 - August 31, 2025",
+        "stardust_kingdom_orlando": "Stardust Kingdom, Orlando",
+        "update_notification": "You will be updated as soon as new updates are out.",
+        "close": "Close"
     },
     "entertainment_merchandise": {
         "14_99": "$14.99",
@@ -2033,7 +2122,7 @@ window.translations.en = {
         "all_series": "All Series",
         "an_epic_fantasy_series_set_in_a_wor": "An epic fantasy series set in a world where magic is fading and kingdoms collide in a war for survival.",
         "chronicles_of_ashenmoor": "Chronicles of Ashenmoor",
-        "chronicles_of_ashenmoor_4_seasons_f": "<a href=\"#poster-ashenmoor\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/chronicals of ashenmoor.png\" alt=\"Chronicles of Ashenmoor poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Chronicles of Ashenmoor</h3>\n                                <div class=\"show-meta\">4 Seasons • Fantasy • TV-MA</div>\n                                <p class=\"card-text\">An epic fantasy series set in a world where magic is fading and kingdoms collide in a war for survival.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-signal-lost\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/signal lost.png\" alt=\"Signal Lost poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Signal Lost</h3>\n                                <div class=\"show-meta\">2 Seasons • Sci-Fi • TV-14</div>\n                                <p class=\"card-text\">A mysterious signal from deep space triggers a chain of events that threatens civilization as we know it.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-golden-hour\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the golden hour.png\" alt=\"The Golden Hour poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">The Golden Hour</h3>\n                                <div class=\"show-meta\">3 Seasons • Drama • TV-MA</div>\n                                <p class=\"card-text\">Inside a prestigious trauma center, a team of surgeons face impossible choices under extreme pressure.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-wild-planet\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/wild planet.png\" alt=\"Wild Planet poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Wild Planet</h3>\n                                <div class=\"show-meta\">5 Seasons • Documentary • TV-G</div>\n                                <p class=\"card-text\">A landmark documentary series exploring the most remote and extraordinary ecosystems on Earth.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-playwright\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the playwright.jpeg\" alt=\"The Playwright poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">The Playwright</h3>\n                                <div class=\"show-meta\">1 Season • Drama • TV-MA</div>\n                                <p class=\"card-text\">A struggling writer in 1920s New York discovers that her plays have the power to reshape reality.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-laugh-track\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the laugh track.jpeg\" alt=\"Laugh Track poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Laugh Track</h3>\n                                <div class=\"show-meta\">2 Seasons • Comedy • TV-14</div>\n                                <p class=\"card-text\">A behind-the-scenes comedy about the chaotic production of a late-night talk show.</p>\n                            </div>\n                        </div>\n                    </a>",
+        "chronicles_of_ashenmoor_4_seasons_f": "<a href=\"details/tv-show-chronicles-of-ashenmoor.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/chronicals of ashenmoor.png\" alt=\"Chronicles of Ashenmoor poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Chronicles of Ashenmoor</h3>\n                                <div class=\"show-meta\">4 Seasons • Fantasy • TV-MA</div>\n                                <p class=\"card-text\">An epic fantasy series set in a world where magic is fading and kingdoms collide in a war for survival.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-signal-lost.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/signal lost.png\" alt=\"Signal Lost poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Signal Lost</h3>\n                                <div class=\"show-meta\">2 Seasons • Sci-Fi • TV-14</div>\n                                <p class=\"card-text\">A mysterious signal from deep space triggers a chain of events that threatens civilization as we know it.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-the-golden-hour.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the golden hour.png\" alt=\"The Golden Hour poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">The Golden Hour</h3>\n                                <div class=\"show-meta\">3 Seasons • Drama • TV-MA</div>\n                                <p class=\"card-text\">Inside a prestigious trauma center, a team of surgeons face impossible choices under extreme pressure.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-wild-planet.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/wild planet.png\" alt=\"Wild Planet poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Wild Planet</h3>\n                                <div class=\"show-meta\">5 Seasons • Documentary • TV-G</div>\n                                <p class=\"card-text\">A landmark documentary series exploring the most remote and extraordinary ecosystems on Earth.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-the-playwright.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the playwright.jpeg\" alt=\"The Playwright poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">The Playwright</h3>\n                                <div class=\"show-meta\">1 Season • Drama • TV-MA</div>\n                                <p class=\"card-text\">A struggling writer in 1920s New York discovers that her plays have the power to reshape reality.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-laugh-track.html\" class=\"tv-card-link\">\n                        <div class=\"tv-card\">\n                            <img src=\"../Asset/the laugh track.jpeg\" alt=\"Laugh Track poster\" class=\"card-img\">\n                            <div class=\"card-body\">\n                                <h3 class=\"card-title\">Laugh Track</h3>\n                                <div class=\"show-meta\">2 Seasons • Comedy • TV-14</div>\n                                <p class=\"card-text\">A behind-the-scenes comedy about the chaotic production of a late-night talk show.</p>\n                            </div>\n                        </div>\n                    </a>",                            
         "chronicles_of_ashenmoor_season_4": "Chronicles of Ashenmoor — Season 4",
         "close_aria": "Close",
         "comedy": "Comedy",
@@ -2061,7 +2150,7 @@ window.translations.en = {
         "the_award_winning_fantasy_epic_retu": "The award-winning fantasy epic returns with its most ambitious season yet. As the Ashenmoor Pact fractures, new alliances form and ancient powers awaken in this sprawling tale of loyalty, sacrifice, and destiny.",
         "the_golden_hour": "The Golden Hour",
         "the_playwright": "The Playwright",
-        "tv_shows_series": "TV Shows &amp; Series",
+        "tv_shows_series": "TV Shows & Series",
         "watch_on_nova": "Watch on Nova+",
         "wild_planet": "Wild Planet"
     },
@@ -2591,6 +2680,18 @@ window.translations.en = {
         "start_your_free_trial": "Start\n            your free trial →"
     },
     "seo": {
+        "entertainment_details_tv-show-chronicles-of-ashenmoor_desc": "Chronicles of Ashenmoor — an epic fantasy series set in a world where magic is fading from Nova Studios.",
+        "entertainment_details_tv-show-chronicles-of-ashenmoor_title": "Chronicles of Ashenmoor — Nova Studios",
+        "entertainment_details_tv-show-signal-lost_desc": "Signal Lost — a mysterious sci-fi thriller series about space signals from Nova Studios.",
+        "entertainment_details_tv-show-signal-lost_title": "Signal Lost — Nova Studios",
+        "entertainment_details_tv-show-the-golden-hour_desc": "The Golden Hour — a compelling medical drama series following a team of surgeons in a trauma center from Nova Studios.",
+        "entertainment_details_tv-show-the-golden-hour_title": "The Golden Hour — Nova Studios",
+        "entertainment_details_tv-show-wild-planet_desc": "Wild Planet — an extraordinary nature and wildlife documentary series narrating remotest ecosystems on Earth from Nova Studios.",
+        "entertainment_details_tv-show-wild-planet_title": "Wild Planet — Nova Studios",
+        "entertainment_details_tv-show-the-playwright_desc": "The Playwright — a mind-bending 1920s drama series about reality-reshaping writing from Nova Studios.",
+        "entertainment_details_tv-show-the-playwright_title": "The Playwright — Nova Studios",
+        "entertainment_details_tv-show-laugh-track_desc": "Laugh Track — a behind-the-scenes comedy series about the chaos of a late-night talk show from Nova Studios.",
+        "entertainment_details_tv-show-laugh-track_title": "Laugh Track — Nova Studios",
         "about_desc": "Learn about Nova Studios, our mission, values, and how we're shaping the future of entertainment worldwide.",
         "about_title": "About Us — Nova Studios",
         "auth_signup_desc": "Create your Nova+ account and start a 30-day free trial.",
@@ -2717,7 +2818,35 @@ window.translations.en = {
         "yes_offline_downloads_are_available": "Yes, offline downloads are available on Standard and Premium plans. You can download up to 25 titles at a time on iOS and Android devices. Downloads expire after 30 days or 48 hours after you start watching, whichever comes first.",
         "yes_we_offer_several_annual_pass_op": "Yes, we offer several annual pass options:",
         "yes_we_ship_to_over_50_countries_wo": "Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by destination. Orders over $100 qualify for free standard shipping in the US and Canada.",
-        "you_can_cancel_your_nova_subscripti": "You can cancel your Nova+ subscription at any time through your account settings. Your access will continue until the end of your current billing period. No cancellation fees apply."
+
+        "billing": "Billing",
+        "what_payment_methods_do_you_accept": "What payment methods do you accept? <span>+</span>",
+        "we_accept_major_credit_and_debit_cards": "We accept major credit and debit cards, including Visa, Mastercard, and American Express. Available payment methods may vary depending on your region.",
+
+        "when_will_i_be_charged_for_my_purchase": "When will I be charged for my purchase? <span>+</span>",
+        "payments_are_processed_immediately_after": "Payments are processed immediately after your order is successfully placed. Once payment is confirmed, you will receive a confirmation email with your purchase details.",
+
+        "what_should_i_do_if_my_payment_fails": "What should I do if my payment fails? <span>+</span>",
+        "verify_that_your_payment_details_are_correct": "Verify that your payment details are correct and ensure your payment method has sufficient funds. If the issue persists, try another payment method or contact your financial institution for assistance.",
+
+        "can_i_request_a_refund": "Can I request a refund? <span>+</span>",
+        "refund_eligibility_depends_on_the_product": "Refund eligibility depends on the product or service purchased and the applicable refund policy. Please review the terms at the time of purchase or contact our support team for assistance.",
+
+        "you_can_cancel_your_nova_subscripti": "You can cancel your Nova+ subscription at any time through your account settings. Your access will continue until the end of your current billing period. No cancellation fees apply.",
+        "account_security": "Account & Security",
+
+        "why_should_i_create_a_nova_account": "Why should I create a Nova Studios account? <span>+</span>",
+        "creating_a_nova_studios_account_allows_you": "Creating a Nova Studios account allows you to purchase theme park tickets, manage your bookings, access Nova+ services, and enjoy a more personalized experience across our platform.",
+
+        "is_my_personal_information_secure": "Is my personal information secure? <span>+</span>",
+        "we_take_the_security_of_your_personal_information_seriously": "Yes. We take the security of your personal information seriously and use industry-standard security practices to help protect your account and personal data. We also recommend keeping your login credentials private and using a strong password.",
+
+        "can_i_change_the_email_address_associated_with_my_account": "Can I change the email address associated with my account? <span>+</span>",
+        "if_account_management_features_are_available": "Yes. If account management features are available, you can update your email address through your account settings. If you experience any issues, please contact our support team for assistance.",
+
+        "why_am_i_required_to_create_an_account_before_purchasing_theme_park_tickets": "Why am I required to create an account before purchasing theme park tickets? <span>+</span>",
+        "creating_an_account_helps_us_securely_manage_your_ticket_purchases": "Creating an account helps us securely manage your ticket purchases, store your booking information, and make it easier to access or manage your reservations in the future."
+
     },
     "support_help": {
         "account_security": "Account &amp; Security",

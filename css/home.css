@@ -195,3 +195,7 @@
     background-color: #d97706;
     border-color: #d97706;
 }
+
+.hero-large {
+    background: linear-gradient(135deg, var(--navbar-bg) 0%, var(--bg-primary-dark-override) 100%);
+}

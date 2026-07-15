@@ -392,7 +392,7 @@ window.translations.es = {
         "quantity_1_1": "<span>Cantidad</span>\n                        <strong id=\"summary-qty\">1</strong>",
         "select_a_date": "Seleccione una fecha",
         "select_theme_park": "Seleccionar parque temático",
-        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Seleccionar parque temático</label>\n                        <seleccione id=\"park-select\" class=\"form-control\" requerido=\"\">\n                            <option value=\"\"disable=\"\" selected=\"\">-- Elija un parque --</option>\n                            <option value=\"orlando\">Reino de Stardust: Orlando, Florida</option>\n                            <option value=\"paris\">Nova World — París, Francia</option>\n                            <option value=\"shanghai\">Paisaje de ensueño: Shanghái, China</option>\n                            <option value=\"sydney\">Islas de la Aventura: Sídney, Australia</option>\n                        </seleccionar>",
+        "select_theme_park_choose_a_park_sta": "<label for=\"park-select\">Seleccionar parque temático</label>\n                        <select id=\"park-select\" class=\"form-control\" required=\"\">\n                            <option value=\"\" disabled=\"\" selected=\"\">-- Elija un parque --</option>\n                            <option value=\"orlando\">Reino de Stardust: Orlando, Florida</option>\n                            <option value=\"paris\">Nova World — París, Francia</option>\n                            <option value=\"shanghai\">Paisaje de ensueño: Shanghái, China</option>\n                            <option value=\"sydney\">Islas de la Aventura: Sídney, Australia</option>\n                            <option value=\"novafan\">NovaFan Con 2025</option>\n                            <option value=\"premiere\">El último reino — Estreno mundial</option>\n                        </select>",
         "select_ticket_type": "Seleccione el tipo de billete",
         "select_visit_date": "<label for=\"visit-date\">Seleccione fecha de visita</label>\n                        <tipo de entrada=\"fecha\" id=\"fecha-visita\" clase=\"control-formulario\" requerido=\"\">",
         "select_visit_date_1": "Seleccionar fecha de visita",
@@ -407,7 +407,12 @@ window.translations.es = {
         "total_inc_tax": "Total (impuestos incluidos)",
         "total_inc_tax_106_92": "<span>Total (impuestos incluidos)</span>\n                        <strong id=\"summary-total\">$106,92</strong>",
         "unlimited_entry_to_all_domestic_par": "Entrada ilimitada a todos los parques nacionales durante los 365 días.",
-        "your_ticket_reservation_has_been_su": "La reserva de su billete se ha completado con éxito. Se ha enviado a su dirección un correo electrónico de confirmación con detalles y códigos de barras."
+        "your_ticket_reservation_has_been_su": "La reserva de su billete se ha completado con éxito. Se ha enviado a su dirección un correo electrónico de confirmación con detalles y códigos de barras.",
+        "novafan_con_2025": "NovaFan Con 2025",
+        "the_last_kingdom_world_premiere": "El último reino — Estreno mundial",
+        "invalid_date": "Fecha no válida",
+        "select_upcoming_dates": "Seleccione fechas futuras",
+        "ok": "Aceptar"
     },
     "common": {},
     "company_careers": {
@@ -813,11 +818,12 @@ window.translations.es = {
         "send_us_a_message": "Envíanos un mensaje",
         "skip_to_main_content": "Saltar al contenido principal",
         "subject": "Sujeto",
-        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Asunto</label>\n                                <seleccione id=\"asunto\" nombre=\"asunto\" clase=\"control-formulario\" requerido=\"\">\n                                    <option value=\"\">Seleccione un tema...</option>\n                                    <option value=\"press\">Consulta de prensa</option>\n                                    <option value=\"partnership\">Asociación</option>\n                                    <option value=\"careers\">Carreras</option>\n                                    <option value=\"streaming\">Soporte Nova+</option>\n                                    <option value=\"parks\">Parques Temáticos</option>\n                                    <option value=\"general\">Pregunta general</option>\n                                </seleccionar>",
+        "subject_select_a_topic_press_inquir": "<label for=\"subject\">Asunto</label>\n                                <select id=\"asunto\" name=\"asunto\" class=\"form-control\" required=\"\">\n                                    <option value=\"\">Seleccione un tema...</option>\n                                    <option value=\"press\">Consulta de prensa</option>\n                                    <option value=\"partnership\">Asociación</option>\n                                    <option value=\"careers\">Carreras</option>\n                                    <option value=\"streaming\">Soporte Nova+</option>\n                                    <option value=\"parks\">Parques Temáticos</option>\n                                    <option value=\"workshop\">Taller de animación</option>\n                                    <option value=\"general\">Pregunta general</option>\n                                </select>",
         "tell_us_how_we_can_help_placeholder": "Cuéntanos cómo podemos ayudarte...",
         "text_8xc8x": ">",
         "thank_you_your_message_has_been_rec": "Gracias. Su mensaje ha sido recibido y el formulario ha sido borrado.",
         "theme_parks": "Parques Temáticos",
+        "animation_workshop": "Taller de animación",
         "we_d_love_to_hear_from_you_reach_ou": "Nos encantaría saber de usted. Comuníquese para consultas de prensa, oportunidades de asociación o preguntas generales."
     },
     "entertainment_animation": {
@@ -1803,6 +1809,84 @@ window.translations.es = {
         "writer_nathan_price_grace_holloway": "<strong>Escritor:</strong> Nathan Price, Grace Holloway",
         "you_might_also_like": "También te puede gustar"
     },
+    "entertainment_details_tv-show-chronicles-of-ashenmoor": {
+        "title": "Crónicas de Ashenmoor",
+        "meta": "<span class=\"meta-item\">4 Temporadas</span>\n                            <span class=\"meta-item\">Fantasía</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 9.4 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Una serie de fantasía épica ambientada en un mundo donde la magia se desvanece y los reinos chocan en una guerra por la supervivencia.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> J.R.R. Martin</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Ramin Djawadi</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 15 de octubre de 2018</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> En curso</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> Crónicas de Ashenmoor"
+    },
+    "entertainment_details_tv-show-signal-lost": {
+        "title": "Señal perdida",
+        "meta": "<span class=\"meta-item\">2 Temporadas</span>\n                            <span class=\"meta-item\">Ciencia Ficción</span>\n                            <span class=\"meta-item\">TV-14</span>",
+        "rating": "★ 8.5 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Una misteriosa señal procedente del espacio profundo desencadena una cadena de acontecimientos que amenaza la civilización tal como la conocemos. Un grupo de astrónomos y científicos corren contra el tiempo para descifrar la transmisión antes de que sea demasiado tarde.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> Marcus Vale</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Helena Vogt</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 15 de enero de 2024</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> En curso</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> Señal perdida"
+    },
+    "entertainment_details_tv-show-the-golden-hour": {
+        "title": "La hora dorada",
+        "meta": "<span class=\"meta-item\">3 Temporadas</span>\n                            <span class=\"meta-item\">Drama</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 8.8 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Dentro de un prestigioso centro de traumatología, un equipo de cirujanos se enfrenta a decisiones imposibles bajo extrema presión. Cada segundo cuenta mientras navegan por el caótico límite entre la vida y la muerte.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> Diane Moreau</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Rajesh Kapoor</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 5 de septiembre de 2022</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> En curso</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> La hora dorada"
+    },
+    "entertainment_details_tv-show-wild-planet": {
+        "title": "Planeta salvaje",
+        "meta": "<span class=\"meta-item\">5 Temporadas</span>\n                            <span class=\"meta-item\">Documental</span>\n                            <span class=\"meta-item\">TV-G</span>",
+        "rating": "★ 9.3 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Una serie documental histórica que explora los ecosistemas más remotos y extraordinarios de la Tierra. Filmada durante cinco años en cincuenta países, captura la naturaleza como nunca antes se había visto.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> David Atten</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 22 de abril de 2020</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+ / Transmisión</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> En curso</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> Planeta salvaje"
+    },
+    "entertainment_details_tv-show-the-playwright": {
+        "title": "El dramaturgo",
+        "meta": "<span class=\"meta-item\">1 Temporada</span>\n                            <span class=\"meta-item\">Drama</span>\n                            <span class=\"meta-item\">TV-MA</span>",
+        "rating": "★ 8.6 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Una escritora en apuros en el Nueva York de los años 20 descubre que sus obras tienen el poder de remodelar la realidad. A medida que sus creaciones comienzan a manifestarse en el mundo real, debe enfrentar las consecuencias de jugar a ser Dios.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> Victor Lang</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 10 de noviembre de 2025</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> Completado</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> El dramaturgo"
+    },
+    "entertainment_details_tv-show-laugh-track": {
+        "title": "Pista de risas",
+        "meta": "<span class=\"meta-item\">2 Temporadas</span>\n                            <span class=\"meta-item\">Comedia</span>\n                            <span class=\"meta-item\">TV-14</span>",
+        "rating": "★ 8.2 <span style=\"font-size: 0.9rem; font-weight: 400; color: #6b7280;\">/10</span>",
+        "description": "Una comedia detrás de escena sobre la caótica producción de un programa de de entrevistas nocturno. Desde invitados excéntricos hasta escritores temperamentales, mira la locura que se necesita para hacer reír al mundo.",
+        "buttons": "<a href=\"../../entertainment/streaming.html\" class=\"btn btn-accent\">Ver en Nova+</a>\n                            <a href=\"#\" class=\"btn btn-secundario\">Ver Tráiler</a>",
+        "tabs": "<button class=\"movie-tab active\">Reparto y Equipo</button>\n                    <button class=\"movie-tab\">Detalles</button>\n                    <button class=\"movie-tab\">Reseñas</button>",
+        "cast_header": "Reparto",
+        "crew_header": "Equipo",
+        "details_row1": "<span class=\"meta-item\"><strong>Creador:</strong> Amara Okafor</span>\n                        <span class=\"meta-item\"><strong>Compositor:</strong> Samuel Ortiz</span>\n                        <span class=\"meta-item\"><strong>Estreno:</strong> 1 de junio de 2024</span>",
+        "details_row2": "<span class=\"meta-item\"><strong>Cadena:</strong> Nova+</span>\n                        <span class=\"meta-item\"><strong>Estado:</strong> En curso</span>\n                        <span class=\"meta-item\"><strong>Idioma:</strong> Inglés</span>",
+        "breadcrumbs": "<a href=\"../../index.html\">Inicio</a> <span>&gt;</span> <a href=\"../../entertainment/tv-shows.html\">Series de TV</a> <span>&gt;</span> Pista de risas"
+    },
     "entertainment_events": {
         "a_look_back_at_our_recent_events_an": "Una mirada retrospectiva a nuestros eventos y experiencias recientes.",
         "a_two_day_intensive_workshop_led_by": "Un taller intensivo de dos días dirigido por animadores senior de Nova, que cubre el diseño de personajes, guiones gráficos y el flujo de trabajo de NovaEngine.",
@@ -1864,7 +1948,12 @@ window.translations.es = {
         "virtual": "Virtual",
         "virtual_1": "<span class=\"badge badge-success\">Virtual</span>",
         "workshop": "Taller",
-        "workshop_register": "<span class=\"tag\">Taller</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Registrarse</a>"
+        "workshop_register": "<span class=\"tag\">Taller</span>\n                            <a href=\"#\" class=\"btn btn-sm btn-primary\">Registrarse</a>",
+        "event_info": "Información del evento",
+        "june_1_august_31_2025_stardust_king_clean": "1 de junio - 31 de agosto de 2025",
+        "stardust_kingdom_orlando": "Reino de Stardust, Orlando",
+        "update_notification": "Se le informará tan pronto como salgan nuevas actualizaciones.",
+        "close": "Cerrar"
     },
     "entertainment_merchandise": {
         "14_99": "$14.99",
@@ -2033,7 +2122,7 @@ window.translations.es = {
         "all_series": "Todas las series",
         "an_epic_fantasy_series_set_in_a_wor": "Una serie de fantasía épica ambientada en un mundo donde la magia se desvanece y los reinos chocan en una guerra por la supervivencia.",
         "chronicles_of_ashenmoor": "Crónicas de Ashenmoor",
-        "chronicles_of_ashenmoor_4_seasons_f": "<a href=\"#poster-ashenmoor\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/chronicals of ashenmoor.png\" alt=\"Póster de Crónicas de Ashenmoor\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Crónicas de Ashenmoor</h3>\n                                <div class=\"show-meta\">4 estaciones • Fantasía • TV-MA</div>\n                                <p class=\"card-text\">Una serie de fantasía épica ambientada en un mundo donde la magia se desvanece y los reinos chocan en una guerra por la supervivencia.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-signal-lost\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/signal lost.png\" alt=\"Póster de señal perdida\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Señal perdida</h3>\n                                <div class=\"show-meta\">2 temporadas • Ciencia ficción • TV-14</div>\n                                <p class=\"card-text\">Una misteriosa señal procedente del espacio profundo desencadena una cadena de acontecimientos que amenaza la civilización tal como la conocemos.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-hora-dorada\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/la hora dorada.png\" alt=\"Póster de la Hora Dorada\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">La hora dorada</h3>\n                                <div class=\"show-meta\">3 temporadas • Drama • TV-MA</div>\n                                <p class=\"card-text\">Dentro de un prestigioso centro de traumatología, un equipo de cirujanos se enfrenta a decisiones imposibles bajo extrema presión.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-planeta-salvaje\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/wild planet.png\" alt=\"Póster del Planeta Salvaje\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Planeta Salvaje</h3>\n                                <div class=\"show-meta\">5 temporadas • Documental • TV-G</div>\n                                <p class=\"card-text\">Una serie documental histórica que explora los ecosistemas más remotos y extraordinarios de la Tierra.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-playwright\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/the playwright.jpeg\" alt=\"El cartel del dramaturgo\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">El Dramaturgo</h3>\n                                <div class=\"show-meta\">1 temporada • Drama • TV-MA</div>\n                                <p class=\"card-text\">Una escritora en apuros en el Nueva York de los años 20 descubre que sus obras tienen el poder de remodelar la realidad.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"#poster-laugh-track\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/the Laugh Track.jpeg\" alt=\"Póster de Laugh Track\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Pista de risas</h3>\n                                <div class=\"show-meta\">2 temporadas • Comedia • TV-14</div>\n                                <p class=\"card-text\">Una comedia detrás de escena sobre la caótica producción de un programa de entrevistas nocturno.</p>\n                            </div>\n                        </div>\n                    </a>",
+        "chronicles_of_ashenmoor_4_seasons_f": "<a href=\"details/tv-show-chronicles-of-ashenmoor.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/chronicals of ashenmoor.png\" alt=\"Póster de Crónicas de Ashenmoor\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Crónicas de Ashenmoor</h3>\n                                <div class=\"show-meta\">4 estaciones • Fantasía • TV-MA</div>\n                                <p class=\"card-text\">Una serie de fantasía épica ambientada en un mundo donde la magia se desvanece y los reinos chocan en una guerra por la supervivencia.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-signal-lost.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/signal lost.png\" alt=\"Póster de señal perdida\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Señal perdida</h3>\n                                <div class=\"show-meta\">2 temporadas • Ciencia ficción • TV-14</div>\n                                <p class=\"card-text\">Una misteriosa señal procedente del espacio profundo desencadena una cadena de acontecimientos que amenaza la civilización tal como la conocemos.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-the-golden-hour.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/la hora dorada.png\" alt=\"Póster de la Hora Dorada\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">La hora dorada</h3>\n                                <div class=\"show-meta\">3 temporadas • Drama • TV-MA</div>\n                                <p class=\"card-text\">Dentro de un prestigioso centro de traumatología, un equipo de cirujanos se enfrenta a decisiones imposibles bajo extrema presión.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-wild-planet.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/wild planet.png\" alt=\"Póster del Planeta Salvaje\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Planeta Salvaje</h3>\n                                <div class=\"show-meta\">5 temporadas • Documental • TV-G</div>\n                                <p class=\"card-text\">Una serie documental histórica que explora los ecosistemas más remotos y extraordinarios de la Tierra.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-the-playwright.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/the playwright.jpeg\" alt=\"El cartel del dramaturgo\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">El Dramaturgo</h3>\n                                <div class=\"show-meta\">1 temporada • Drama • TV-MA</div>\n                                <p class=\"card-text\">Una escritora en apuros en el Nueva York de los años 20 descubre que sus obras tienen el poder de remodelar la realidad.</p>\n                            </div>\n                        </div>\n                    </a>\n                    <a href=\"details/tv-show-laugh-track.html\" class=\"tv-card-link\">\n                        <div class=\"tarjeta-tv\">\n                            <img src=\"../Asset/the Laugh Track.jpeg\" alt=\"Póster de Laugh Track\" class=\"card-img\">\n                            <div class=\"cuerpo-tarjeta\">\n                                <h3 class=\"card-title\">Pista de risas</h3>\n                                <div class=\"show-meta\">2 temporadas • Comedia • TV-14</div>\n                                <p class=\"card-text\">Una comedia detrás de escena sobre la caótica producción de un programa de entrevistas nocturno.</p>\n                            </div>\n                        </div>\n                    </a>",
         "chronicles_of_ashenmoor_season_4": "Crónicas de Ashenmoor - Temporada 4",
         "close_aria": "Cerca",
         "comedy": "Comedia",
@@ -2591,6 +2680,18 @@ window.translations.es = {
         "start_your_free_trial": "Empezar\n            tu prueba gratuita →"
     },
     "seo": {
+        "entertainment_details_tv-show-chronicles-of-ashenmoor_desc": "Chronicles of Ashenmoor — una serie dramática de fantasía épica ambientada en un mundo donde la magia se desvanece de Nova Studios.",
+        "entertainment_details_tv-show-chronicles-of-ashenmoor_title": "Crónicas de Ashenmoor — Nova Studios",
+        "entertainment_details_tv-show-signal-lost_desc": "Signal Lost — una misteriosa serie de suspenso y ciencia ficción sobre señales espaciales de Nova Studios.",
+        "entertainment_details_tv-show-signal-lost_title": "Señal perdida — Nova Studios",
+        "entertainment_details_tv-show-the-golden-hour_desc": "The Golden Hour — una serie dramática médica apasionante sobre un equipo de cirujanos en un centro de traumatología de Nova Studios.",
+        "entertainment_details_tv-show-the-golden-hour_title": "La hora dorada — Nova Studios",
+        "entertainment_details_tv-show-wild-planet_desc": "Wild Planet — una serie documental histórica sobre la naturaleza y vida silvestre que explora ecosistemas remotos de Nova Studios.",
+        "entertainment_details_tv-show-wild-planet_title": "Planeta salvaje — Nova Studios",
+        "entertainment_details_tv-show-the-playwright_desc": "The Playwright — una serie dramática alucinante de los años 20 sobre una escritora cuya obra cambia la realidad de Nova Studios.",
+        "entertainment_details_tv-show-the-playwright_title": "El dramaturgo — Nova Studios",
+        "entertainment_details_tv-show-laugh-track_desc": "Laugh Track — una divertida comedia sobre la caótica producción detrás de escena de un talk show nocturno de Nova Studios.",
+        "entertainment_details_tv-show-laugh-track_title": "Pista de risas — Nova Studios",
         "about_desc": "Conozca más sobre Nova Studios, nuestra misión, nuestros valores y cómo estamos dando forma al futuro del entretenimiento en todo el mundo.",
         "about_title": "Sobre Nosotros — Nova Studios",
         "auth_signup_desc": "Crea tu cuenta Nova+ y comienza una prueba gratuita de 30 días.",
@@ -2717,7 +2818,33 @@ window.translations.es = {
         "yes_offline_downloads_are_available": "Sí, las descargas sin conexión están disponibles en los planes Estándar y Premium. Puedes descargar hasta 25 títulos a la vez en dispositivos iOS y Android. Las descargas caducan después de 30 días o 48 horas después de comenzar a mirar, lo que ocurra primero.",
         "yes_we_offer_several_annual_pass_op": "Sí, ofrecemos varias opciones de pases anuales:",
         "yes_we_ship_to_over_50_countries_wo": "Sí, enviamos a más de 50 países en todo el mundo. Las tarifas de envío internacional y los tiempos de entrega varían según el destino. Los pedidos superiores a $100 califican para envío estándar gratuito en EE. UU. y Canadá.",
-        "you_can_cancel_your_nova_subscripti": "Puede cancelar su suscripción a Nova+ en cualquier momento a través de la configuración de su cuenta. Su acceso continuará hasta el final de su período de facturación actual. No se aplican gastos de cancelación."
+        "you_can_cancel_your_nova_subscripti": "Puede cancelar su suscripción a Nova+ en cualquier momento a través de la configuración de su cuenta. Su acceso continuará hasta el final de su período de facturación actual. No se aplican gastos de cancelación.",
+        "billing": "Facturación",
+        "what_payment_methods_do_you_accept": "¿Qué métodos de pago aceptan? <span>+</span>",
+        "we_accept_major_credit_and_debit_cards": "Aceptamos las principales tarjetas de crédito y débito, incluidas Visa, Mastercard y American Express. Los métodos de pago disponibles pueden variar según tu región.",
+
+        "when_will_i_be_charged_for_my_purchase": "¿Cuándo se realizará el cargo por mi compra? <span>+</span>",
+        "payments_are_processed_immediately_after": "Los pagos se procesan inmediatamente después de que tu compra se realiza correctamente. Una vez confirmado el pago, recibirás un correo electrónico con los detalles de tu compra.",
+
+        "what_should_i_do_if_my_payment_fails": "¿Qué debo hacer si mi pago falla? <span>+</span>",
+        "verify_that_your_payment_details_are_correct": "Verifica que los datos de tu pago sean correctos y que tu método de pago tenga fondos suficientes. Si el problema persiste, prueba con otro método de pago o ponte en contacto con tu entidad financiera.",
+
+        "can_i_request_a_refund": "¿Puedo solicitar un reembolso? <span>+</span>",
+        "refund_eligibility_depends_on_the_product": "La elegibilidad para un reembolso depende del producto o servicio adquirido y de la política de reembolso correspondiente. Consulta los términos en el momento de la compra o ponte en contacto con nuestro equipo de soporte para obtener ayuda.",
+        "account_security": "Cuenta y Seguridad",
+
+        "why_should_i_create_a_nova_account": "¿Por qué debería crear una cuenta de Nova Studios? <span>+</span>",
+        "creating_a_nova_studios_account_allows_you": "Crear una cuenta de Nova Studios te permite comprar entradas para los parques temáticos, administrar tus reservas, acceder a los servicios de Nova+ y disfrutar de una experiencia más personalizada en nuestra plataforma.",
+
+        "is_my_personal_information_secure": "¿Está segura mi información personal? <span>+</span>",
+        "we_take_the_security_of_your_personal_information_seriously": "Sí. Nos tomamos muy en serio la seguridad de tu información personal y utilizamos prácticas de seguridad estándar de la industria para ayudar a proteger tu cuenta y tus datos personales. También te recomendamos mantener privadas tus credenciales de inicio de sesión y utilizar una contraseña segura.",
+
+        "can_i_change_the_email_address_associated_with_my_account": "¿Puedo cambiar la dirección de correo electrónico asociada a mi cuenta? <span>+</span>",
+        "if_account_management_features_are_available": "Sí. Si las funciones de administración de la cuenta están disponibles, puedes actualizar tu dirección de correo electrónico desde la configuración de tu cuenta. Si tienes algún problema, ponte en contacto con nuestro equipo de soporte para obtener ayuda.",
+
+        "why_am_i_required_to_create_an_account_before_purchasing_theme_park_tickets": "¿Por qué debo crear una cuenta antes de comprar entradas para los parques temáticos? <span>+</span>",
+        "creating_an_account_helps_us_securely_manage_your_ticket_purchases": "Crear una cuenta nos ayuda a gestionar de forma segura la compra de tus entradas, almacenar la información de tus reservas y facilitar el acceso o la administración de tus reservas en el futuro."
+
     },
     "support_help": {
         "account_security": "Cuenta y seguridad",

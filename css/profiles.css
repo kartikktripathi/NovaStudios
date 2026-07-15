@@ -1,0 +1,328 @@
+:root {
+    --nova-deep: #020814;
+    --nova-navy: #07162f;
+    --nova-blue: #0d2b59;
+    --nova-gold: #f5ad22;
+    --nova-white: #f8f4eb;
+    --nova-muted: #aeb7c7;
+    --nova-error: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--nova-white);
+    background:
+        radial-gradient(circle at 50% 30%, #102b58 0%, transparent 38%),
+        linear-gradient(135deg, var(--nova-deep), var(--nova-navy));
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+.profiles-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 6%;
+}
+
+.nova-brand {
+    color: var(--nova-white);
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nova-brand span,
+.nova-plus span {
+    color: var(--nova-gold);
+}
+
+.nova-plus {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.profile-selection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 30px 70px;
+}
+
+.profile-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-eyebrow {
+    margin-bottom: 14px;
+    color: var(--nova-gold);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.profile-heading h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    line-height: 1;
+}
+
+.profile-subtitle {
+    margin-top: 18px;
+    color: var(--nova-muted);
+    font-size: 1rem;
+}
+
+.profiles-grid {
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.profile-card {
+    width: 150px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profile-card:hover .profile-avatar,
+.profile-card:focus-visible .profile-avatar {
+    transform: scale(1.07);
+    border-color: var(--nova-white);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-blue {
+    background: linear-gradient(135deg, #195ca8, #071d40);
+}
+
+.avatar-gold {
+    color: #16110a;
+    background: linear-gradient(135deg, #ffd267, #c77b08);
+}
+
+.avatar-kids {
+    background: linear-gradient(135deg, #16a085, #073b35);
+}
+
+.avatar-purple {
+    background: linear-gradient(135deg, #7650b9, #281346);
+}
+
+.profile-name {
+    display: block;
+    margin-top: 17px;
+    color: var(--nova-muted);
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.profile-card:hover .profile-name,
+.profile-card:focus-visible .profile-name {
+    color: var(--nova-white);
+}
+
+.kids-badge {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #111;
+    background: var(--nova-gold);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.add-profile-avatar {
+    border: 2px dashed rgba(255, 255, 255, 0.35);
+    color: var(--nova-muted);
+    background: rgba(255, 255, 255, 0.04);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.manage-profiles-button {
+    margin-top: 55px;
+    padding: 13px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    color: var(--nova-muted);
+    background: transparent;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+}
+
+.manage-profiles-button:hover {
+    border-color: var(--nova-white);
+    color: var(--nova-white);
+}
+
+.profile-message {
+    min-height: 22px;
+    margin-top: 20px;
+    color: var(--nova-gold);
+    font-size: 0.85rem;
+}
+
+.profiles-footer {
+    padding: 24px;
+    color: #657187;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.profile-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.profile-modal.is-open {
+    display: flex;
+}
+
+.profile-modal-card {
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    padding: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    background: #07152d;
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6);
+}
+
+.profile-modal-card h2 {
+    margin-bottom: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+}
+
+.modal-description {
+    margin-bottom: 28px;
+    color: var(--nova-muted);
+    line-height: 1.6;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    border: 0;
+    cursor: pointer;
+    color: var(--nova-muted);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.profile-modal-card label:not(.kids-profile-option) {
+    display: block;
+    margin-bottom: 9px;
+    color: #dce2ec;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#profileName {
+    width: 100%;
+    height: 54px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    outline: none;
+    color: var(--nova-white);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#profileName:focus {
+    border-color: var(--nova-gold);
+}
+
+.kids-profile-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: var(--nova-muted);
+    cursor: pointer;
+}
+
+.kids-profile-option input {
+    accent-color: var(--nova-gold);
+}
+
+.modal-error {
+    min-height: 20px;
+    margin: 15px 0 5px;
+    color: var(--nova-error);
+    font-size: 0.82rem;
+}
+
+.create-profile-button {
+    width: 100%;
+    height: 52px;
+    border: 0;}

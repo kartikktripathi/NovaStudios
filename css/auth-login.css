@@ -1,0 +1,323 @@
+:root {
+    --nova-navy: #07162f;
+    --nova-deep: #020814;
+    --nova-blue: #0b2348;
+    --nova-gold: #f5ad22;
+    --nova-gold-light: #ffc64d;
+    --nova-white: #f8f4eb;
+    --nova-muted: #aeb7c7;
+    --nova-error: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--nova-white);
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(30, 75, 145, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(245, 173, 34, 0.1),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--nova-deep),
+            var(--nova-navy) 55%,
+            #030a17
+        );
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+        );
+    background-size: 60px 60px;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-header {
+    width: 100%;
+    padding: 32px 6%;
+}
+
+.nova-brand {
+    display: inline-block;
+    color: var(--nova-white);
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nova-brand span {
+    color: var(--nova-gold);
+}
+
+.auth-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 60px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 46px 42px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    background: rgba(4, 14, 32, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.nova-plus-mark {
+    margin-bottom: 24px;
+    color: var(--nova-white);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.nova-plus-mark span {
+    color: var(--nova-gold);
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.35rem;
+    line-height: 1.1;
+}
+
+.login-subtitle {
+    margin-bottom: 34px;
+    color: var(--nova-muted);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #dce2ec;
+    font-size: 0.87rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    height: 54px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    outline: none;
+    color: var(--nova-white);
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 0.96rem;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #778296;
+}
+
+.form-group input:focus {
+    border-color: var(--nova-gold);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 0 0 3px rgba(245, 173, 34, 0.12);
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 78px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    border: 0;
+    cursor: pointer;
+    color: var(--nova-gold-light);
+    background: transparent;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 4px 0 24px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--nova-muted);
+    font-size: 0.84rem;
+    cursor: pointer;
+}
+
+.remember-option input {
+    accent-color: var(--nova-gold);
+}
+
+.forgot-link,
+.signup-text a {
+    color: var(--nova-gold-light);
+    text-decoration: none;
+}
+
+.forgot-link {
+    font-size: 0.84rem;
+}
+
+.forgot-link:hover,
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+.login-error {
+    min-height: 20px;
+    margin-bottom: 10px;
+    color: var(--nova-error);
+    font-size: 0.84rem;
+    line-height: 1.4;
+}
+
+.sign-in-button {
+    width: 100%;
+    height: 54px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #10141c;
+    background: linear-gradient(
+        135deg,
+        var(--nova-gold-light),
+        var(--nova-gold)
+    );
+    font-size: 0.95rem;
+    font-weight: 800;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sign-in-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(245, 173, 34, 0.24);
+}
+
+.sign-in-button:active {
+    transform: translateY(0);
+}
+
+.signup-text {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--nova-muted);
+    font-size: 0.9rem;
+}
+
+.auth-note {
+    margin-top: 20px;
+    color: #758095;
+    text-align: center;
+    font-size: 0.74rem;
+    line-height: 1.5;
+}
+
+.auth-footer {
+    padding: 24px;
+    color: #667287;
+    text-align: center;
+    font-size: 0.76rem;
+}
+
+@media (max-width: 600px) {
+    .auth-header {
+        padding: 24px;
+    }
+
+    .nova-brand {
+        font-size: 1.35rem;
+    }
+
+    .auth-content {
+        align-items: flex-start;
+        padding-top: 25px;
+    }
+
+    .login-card {
+        padding: 36px 24px;
+        border-radius: 14px;
+    }
+
+    .login-card h1 {
+        font-size: 2rem;
+    }
+
+    .form-options {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

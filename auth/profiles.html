@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Choose your Nova+ streaming profile."
+    >
+
+    <title>Who's Watching? | Nova+</title>
+
+    <link rel="stylesheet" href="../css/profiles.css">
+</head>
+
+<body>
+    <main class="profiles-page">
+
+        <header class="profiles-header">
+            <a
+                href="../index.html"
+                class="nova-brand"
+                aria-label="Nova Studios home"
+            >
+                NOVA<span>STUDIOS</span>
+            </a>
+
+            <div class="nova-plus">
+                NOVA<span>+</span>
+            </div>
+        </header>
+
+        <section class="profile-selection">
+
+            <div class="profile-heading">
+                <p class="profile-eyebrow">
+                    NOVA+ STREAMING
+                </p>
+
+                <h1>Who's watching?</h1>
+
+                <p class="profile-subtitle">
+                    Choose a profile to continue your Nova+ experience.
+                </p>
+            </div>
+
+            <div
+                class="profiles-grid"
+                id="profilesGrid"
+                aria-label="Nova+ profiles"
+            >
+
+                <button
+                    class="profile-card"
+                    type="button"
+                    data-profile="Alex"
+                >
+                    <span class="profile-avatar avatar-blue">
+                        A
+                    </span>
+
+                    <span class="profile-name">
+                        Alex
+                    </span>
+                </button>
+
+                <button
+                    class="profile-card"
+                    type="button"
+                    data-profile="Maya"
+                >
+                    <span class="profile-avatar avatar-gold">
+                        M
+                    </span>
+
+                    <span class="profile-name">
+                        Maya
+                    </span>
+                </button>
+
+                <button
+                    class="profile-card"
+                    type="button"
+                    data-profile="Kids"
+                    data-kids="true"
+                >
+                    <span class="profile-avatar avatar-kids">
+                        K
+                    </span>
+
+                    <span class="profile-name">
+                        Kids
+                    </span>
+
+                    <span class="kids-badge">
+                        KIDS
+                    </span>
+                </button>
+
+                <button
+                    class="profile-card"
+                    type="button"
+                    data-profile="Guest"
+                >
+                    <span class="profile-avatar avatar-purple">
+                        G
+                    </span>
+
+                    <span class="profile-name">
+                        Guest
+                    </span>
+                </button>
+
+                         </div>
+
+            
+
+            <p
+                class="profile-message"
+                id="profileMessage"
+                aria-live="polite"
+            ></p>
+
+        </section>
+<script>
+document.querySelectorAll(".profile-card[data-profile]").forEach(function(card) {
+    card.addEventListener("click", function() {
+        const name = card.dataset.profile;
+
+        localStorage.setItem(
+            "novaPlusActiveProfile",
+            JSON.stringify({
+                name: name,
+                isKids: card.dataset.kids === "true"
+            })
+        );
+
+        window.location.href = "../entertainment/streaming.html";
+    });
+});
+</script>
+
+</main>
+</body>
+</html>
+        

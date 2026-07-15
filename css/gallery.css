@@ -116,8 +116,13 @@
     object-fit: cover;
     display: block;
     border-radius: inherit;
-
+}
 @media (max-width: 480px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+}
+@media (max-width: 375px) {
     .gallery-grid {
         column-count: 1;
     }

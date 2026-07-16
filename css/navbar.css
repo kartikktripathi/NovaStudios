@@ -413,3 +413,37 @@
     font-weight: normal;
 }
 
+
+.navbar-login {
+    color: var(--navbar-link, #374151);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 4px;
+}
+.navbar-login:hover {
+    color: var(--navbar-link-hover, #1f2937);
+}
+
+.navbar-profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--navbar-profile-bg, #f3f4f6);
+    color: var(--navbar-link, #374151);
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.navbar-profile-icon:hover {
+    background: var(--navbar-profile-bg-hover, #e5e7eb);
+}
+[data-theme="dark"] .navbar-profile-icon {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+[data-theme="dark"] .navbar-profile-icon:hover {
+    background: #334155;
+}

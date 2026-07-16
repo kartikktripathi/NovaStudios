@@ -1,0 +1,281 @@
+<html lang="en"><head></head><body>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Nova Studios</title>
+    <meta name="description" content="Manage your Nova Studios account, watch history, and favorites.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <style>
+        .profile-layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 32px;
+            align-items: start;
+        }
+        .profile-sidebar {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        [data-theme="dark"] .profile-sidebar {
+            background: #0f172a;
+            border-color: #0f172a;
+        }
+        .profile-sidebar a {
+            display: block;
+            padding: 8px 0;
+            color: #374151;
+            text-decoration: none;
+        }
+        [data-theme="dark"] .profile-sidebar a {
+            color: #e5e7eb;
+        }
+        .profile-panel {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08);
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+        [data-theme="dark"] .profile-panel {
+            background: #0f172a;
+            border-color: #0f172a;
+        }
+        .history-grid, .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 16px;
+        }
+        .history-item, .favorite-item {
+            background: #f3f4f6;
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        [data-theme="dark"] .history-item, [data-theme="dark"] .favorite-item {
+            background: #1e293b;
+            color: #e5e7eb;
+        }
+        @media (max-width: 900px) {
+            .profile-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="js/main.js"></script>
+
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" data-i18n-html="navbar.novastudios"><span class="logo-text" data-i18n-html="navbar.novastudios_1">NOVA<span class="logo-accent" data-i18n="navbar.studios">STUDIOS</span></span></a>
+            <ul class="nav-links">
+                <li>
+                    <a href="about.html" data-i18n="navbar.about">About</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div>
+                                <div class="mega-menu-header" data-i18n="navbar.company">Company</div>
+                                <a href="about.html" data-i18n="navbar.about_us">About Us</a>
+                                <a href="company/history.html" data-i18n="navbar.our_history">Our History</a>
+                                <a href="company/leadership.html" data-i18n="navbar.leadership">Leadership</a>
+                                <a href="company/careers.html" data-i18n="navbar.careers">Careers</a>
+                            </div>
+                            <div>
+                                <div class="mega-menu-header" data-i18n="navbar.info">Info</div>
+                                <a href="company/departments.html" data-i18n="navbar.departments">Departments</a>
+                                <a href="company/investors.html" data-i18n="navbar.investors">Investors</a>
+                                <a href="company/sustainability.html" data-i18n="navbar.sustainability">Sustainability</a>
+                                <a href="company/partnerships.html" data-i18n="navbar.partnerships">Partnerships</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="movies.html" data-i18n="navbar.entertainment">Entertainment</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div>
+                                <div class="mega-menu-header" data-i18n="navbar.watch">Watch</div>
+                                <a href="movies.html" data-i18n="navbar.movies">Movies</a>
+                                <a href="entertainment/tv-shows.html" data-i18n="navbar.tv_shows">TV Shows</a>
+                                <a href="entertainment/animation.html" data-i18n="navbar.animation">Animation</a>
+                                <a href="entertainment/streaming.html" data-i18n="navbar.nova">Nova+</a>
+                            </div>
+                            <div>
+                                <div class="mega-menu-header" data-i18n="navbar.experience">Experience</div>
+                                <a href="entertainment/theme-parks.html" data-i18n="navbar.theme_parks">Theme Parks</a>
+                                <a href="entertainment/merchandise.html" data-i18n="navbar.merchandise">Merchandise</a>
+                                <a href="entertainment/events.html" data-i18n="navbar.events">Events</a>
+                                <a href="media/gallery.html" data-i18n="navbar.gallery">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="news.html" data-i18n="navbar.news_1">News</a></li>
+                <li><a href="blog.html" data-i18n="navbar.blog_1">Blog</a></li>
+                <li><a href="awards.html" data-i18n="navbar.awards_1">Awards</a></li>
+                <li><a href="contact.html" data-i18n="navbar.contact_1">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="auth/login.html" class="navbar-login">Log In</a>
+                <a href="auth/signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+                <a href="profile.html" class="navbar-profile-icon" aria-label="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+                    </svg>
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero hero-compact hero-gradient-blue" id="main">
+        <div class="container">
+            <div class="breadcrumbs"><a href="index.html">Home</a> &gt; My Profile</div>
+            <h1>Hello, <span id="user-greeting-name">Guest</span>!</h1>
+            <p>Manage your account details, watch history, and favorites.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="profile-layout">
+                    <aside class="profile-sidebar">
+                        <a href="#account-details">Account Details</a>
+                        <a href="#watch-history">Watch History</a>
+                        <a href="#favorites">Favorites</a>
+                        <a href="#" id="logout-link" style="color: #ef4444; margin-top: 16px; border-top: 1px solid #e5e7eb; padding-top: 12px; font-weight: 500;">Log Out</a>
+                    </aside>
+
+                    <div>
+                        <div class="profile-panel" id="account-details">
+                            <h2>Account Details</h2>
+                            <p class="text-muted mb-3">Update your phone number and email address.</p>
+                            <form id="profile-form" method="post">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com">
+                                </div>
+                                <button type="submit" class="btn btn-accent">Save Changes</button>
+                                <p id="profile-status" class="form-success" role="status" aria-live="polite" hidden>
+                                    Your profile has been updated. This demo form has been submitted successfully.
+                                </p>
+                            </form>
+                        </div>
+
+                        <div class="profile-panel" id="watch-history">
+                            <h2>Watch History</h2>
+                            <p class="text-muted mb-3">Shows and movies you've recently watched.</p>
+                            <div class="history-grid">
+                                <div class="history-item">Stellar Horizon</div>
+                                <div class="history-item">Luminara</div>
+                                <div class="history-item">The Cartographer</div>
+                                <div class="history-item">Midnight Signal</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-panel" id="favorites">
+                            <h2>Favorites</h2>
+                            <p class="text-muted mb-3">Shows and movies you've saved.</p>
+                            <div class="favorites-grid">
+                                <div class="favorite-item">Ocean Depths</div>
+                                <div class="favorite-item">Sunstone</div>
+                                <div class="favorite-item">Wild Frontier</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand" data-i18n-html="footer.novastudios"><span class="logo-text" data-i18n-html="footer.novastudios_1">NOVA<span class="logo-accent" data-i18n="footer.studios">STUDIOS</span></span></div>
+                <p data-i18n="footer.nova_studios_is_a_global_entertainm">Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
+                <div class="footer-social" data-i18n-html="footer.fbtwigytli"><a href="https://facebook.com/NovaStudios" target="_blank" rel="noopener noreferrer" data-i18n="footer.fb">FB</a><a href="https://twitter.com/NovaStudios" target="_blank" rel="noopener noreferrer" data-i18n="footer.tw">TW</a><a href="https://instagram.com/NovaStudios" target="_blank" rel="noopener noreferrer" data-i18n="footer.ig">IG</a><a href="https://youtube.com/@NovaStudios" target="_blank" rel="noopener noreferrer" data-i18n="footer.yt">YT</a><a href="https://linkedin.com/company/novastudios" target="_blank" rel="noopener noreferrer" data-i18n="footer.li">LI</a></div>
+            </div>
+            <div class="footer-col"><h3 data-i18n="footer.company">Company</h3><ul><li><a href="about.html">About Us</a></li><li><a href="company/careers.html">Careers</a></li><li><a href="news.html">News</a></li><li><a href="company/investors.html">Investors</a></li></ul></div>
+            <div class="footer-col"><h3 data-i18n="footer.entertainment">Entertainment</h3><ul><li><a href="movies.html">Movies</a></li><li><a href="entertainment/tv-shows.html">TV Shows</a></li><li><a href="entertainment/streaming.html">Nova+</a></li><li><a href="entertainment/theme-parks.html">Theme Parks</a></li></ul></div>
+            <div class="footer-col"><h3 data-i18n="footer.support">Support</h3><ul><li><a href="support/help.html">Help Center</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="support/faq.html">FAQ</a></li><li><a href="legal/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Nova Studios. All rights reserved.</p><div class="footer-bottom-links"><a href="legal/privacy.html">Privacy</a><a href="legal/terms.html">Terms</a><a href="legal/accessibility-page.html">Accessibility</a></div></div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+            <script>
+        (function () {
+            // Get the user's logged-in session details
+            var sessionData = sessionStorage.getItem('novaPlusSession');
+            if (sessionData) {
+                var session = JSON.parse(sessionData);
+                if (session && session.authenticated && session.name) {
+                    // 1. Update the greeting with the user's name
+                    var greetingName = document.getElementById('user-greeting-name');
+                    if (greetingName) {
+                        greetingName.textContent = session.name;
+                    }
+                    // 2. Pre-fill the email field with their logged-in email
+                    var emailInput = document.getElementById('email');
+                    if (emailInput && session.email) {
+                        emailInput.value = session.email;
+                    }
+                }
+            }
+
+            // 3. Log Out button logic
+            var logoutLink = document.getElementById('logout-link');
+            if (logoutLink) {
+                logoutLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    // Clear the logged-in session
+                    sessionStorage.removeItem('novaPlusSession');
+                    alert('You have been logged out successfully!');
+                    // Redirect back to the homepage
+                    window.location.href = 'index.html';
+                });
+            }
+
+            // Keep the form submit behavior
+            var form = document.getElementById('profile-form');
+            var status = document.getElementById('profile-status');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                status.hidden = false;
+            });
+        })();
+    </script>
+</body></html>

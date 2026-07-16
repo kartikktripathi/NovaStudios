@@ -101,10 +101,20 @@
     let watchlist = [];
     let activeGenre = "category_all";
     let searchQuery = "";
+    let isInitialized = false;
 
     // DOM Elements
     let catalogGrid, watchlistContainer, watchlistGrid, searchInput, filterPills;
     let playerModal, videoPlayer, playBtn, muteBtn, volumeSlider, progressContainer, progressFill, timeDisplay, fullscreenBtn, closePlayerBtn;
+
+    // Safe translation wrapper to prevent script crash if window.t is not loaded yet
+    function translate(key) {
+        if (typeof window.t === 'function') {
+            return window.t(key);
+        }
+        // Fallback title formatting if i18n isn't loaded yet
+        return key.split('.').pop().replace(/_/g, ' ');
+    }
 
     // 2. Local Storage Watchlist helper functions
     function loadWatchlist() {
@@ -117,7 +127,11 @@
     }
 
     function saveWatchlist() {
-        localStorage.setItem('watchlist', JSON.stringify(watchlist));
+        try {
+            localStorage.setItem('watchlist', JSON.stringify(watchlist));
+        } catch (e) {
+            console.error("Failed to write to localStorage:", e);
+        }
     }
 
     function toggleWatchlist(id) {
@@ -136,14 +150,21 @@
     function renderWatchlist() {
         if (!watchlistContainer) return;
 
-        if (watchlist.length === 0) {
-            watchlistContainer.classList.add('hidden');
-            return;
-        }
-
         watchlistContainer.classList.remove('hidden');
         watchlistGrid.innerHTML = '';
 
+        if (watchlist.length === 0) {
+            watchlistGrid.style.display = 'block';
+            watchlistGrid.innerHTML = `
+                <div class="empty-watchlist-note">
+                    <i class="fa-regular fa-bookmark" style="font-size: 2rem; margin-bottom: 12px; display: block; color: var(--text-muted);"></i>
+                    <p>${translate('entertainment_streaming.empty_watchlist')}</p>
+                </div>
+            `;
+            return;
+        }
+
+        watchlistGrid.style.display = 'grid';
         watchlist.forEach(id => {
             const item = videoCatalog.find(v => v.id === id);
             if (item) {
@@ -159,7 +180,7 @@
         catalogGrid.innerHTML = '';
         const filtered = videoCatalog.filter(item => {
             const matchesGenre = item.genres.includes(activeGenre);
-            const matchesSearch = window.t(item.titleKey).toLowerCase().includes(searchQuery);
+            const matchesSearch = translate(item.titleKey).toLowerCase().includes(searchQuery);
             return matchesGenre && matchesSearch;
         });
 
@@ -169,7 +190,7 @@
             emptyNote.style.gridColumn = '1 / -1';
             emptyNote.innerHTML = `
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <p>${window.t('global_search.search_no_results')} "${escapeHtml(searchQuery)}"</p>
+                <p>${translate('global_search.search_no_results')} "${escapeHtml(searchQuery)}"</p>
             `;
             catalogGrid.appendChild(emptyNote);
             return;
@@ -187,8 +208,8 @@
         card.className = 'movie-card';
 
         // Translate inner elements dynamically
-        const translatedTitle = window.t(item.titleKey);
-        const translatedMeta = window.t(item.typeKey);
+        const translatedTitle = translate(item.titleKey);
+        const translatedMeta = translate(item.typeKey);
 
         card.innerHTML = `
             <div class="placeholder-img ${item.bgClass} card-img" style="height: 260px;">${translatedTitle}</div>
@@ -196,7 +217,7 @@
                 <div class="play-overlay-icon"><i class="fa-solid fa-play"></i></div>
             </div>
             <div class="card-actions-overlay">
-                <button class="card-action-btn ${inWatchlist ? 'added' : ''}" title="${inWatchlist ? window.t('entertainment_streaming.remove_from_watchlist') : window.t('entertainment_streaming.add_to_watchlist')}">
+                <button class="card-action-btn ${inWatchlist ? 'added' : ''}" title="${inWatchlist ? translate('entertainment_streaming.remove_from_watchlist') : translate('entertainment_streaming.add_to_watchlist')}">
                     <i class="${inWatchlist ? 'fa-solid fa-check' : 'fa-solid fa-plus'}"></i>
                 </button>
             </div>
@@ -253,7 +274,7 @@
 
     function updatePlayBtnUI(isPlaying) {
         playBtn.innerHTML = isPlaying ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
-        playBtn.setAttribute('title', isPlaying ? window.t('entertainment_streaming.player_pause') : window.t('entertainment_streaming.player_play'));
+        playBtn.setAttribute('title', isPlaying ? translate('entertainment_streaming.player_pause') : translate('entertainment_streaming.player_play'));
     }
 
     function togglePlay() {
@@ -269,7 +290,7 @@
     function toggleMute() {
         videoPlayer.muted = !videoPlayer.muted;
         muteBtn.innerHTML = videoPlayer.muted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
-        muteBtn.setAttribute('title', videoPlayer.muted ? window.t('entertainment_streaming.player_unmute') : window.t('entertainment_streaming.player_mute'));
+        muteBtn.setAttribute('title', videoPlayer.muted ? translate('entertainment_streaming.player_unmute') : translate('entertainment_streaming.player_mute'));
         volumeSlider.value = videoPlayer.muted ? 0 : videoPlayer.volume;
     }
 
@@ -310,16 +331,18 @@
                 console.error("Error attempting to enable full-screen mode:", err.message);
             });
             fullscreenBtn.innerHTML = '<i class="fa-solid fa-minimize"></i>';
-            fullscreenBtn.setAttribute('title', window.t('entertainment_streaming.player_exit_fullscreen'));
+            fullscreenBtn.setAttribute('title', translate('entertainment_streaming.player_exit_fullscreen'));
         } else {
             document.exitFullscreen();
             fullscreenBtn.innerHTML = '<i class="fa-solid fa-maximize"></i>';
-            fullscreenBtn.setAttribute('title', window.t('entertainment_streaming.player_fullscreen'));
+            fullscreenBtn.setAttribute('title', translate('entertainment_streaming.player_fullscreen'));
         }
     }
 
     // Initialize Page
     function init() {
+        if (isInitialized) return;
+
         catalogGrid = document.getElementById('catalog-grid');
         watchlistContainer = document.getElementById('watchlist-container');
         watchlistGrid = document.getElementById('watchlist-row');
@@ -377,15 +400,24 @@
         }
 
         loadWatchlist();
-        renderWatchlist();
-        renderCatalog();
+        isInitialized = true;
 
-        // Translate on custom lang events
-        window.addEventListener('languagechanged', () => {
+        // Render immediately if translations are already available
+        if (typeof window.t === 'function' && window.translations) {
             renderWatchlist();
             renderCatalog();
-        });
+        }
     }
+
+    // Bind page rendering and re-rendering to language change notifications
+    window.addEventListener('languagechanged', () => {
+        if (!isInitialized) {
+            init();
+        } else {
+            renderWatchlist();
+            renderCatalog();
+        }
+    });
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);

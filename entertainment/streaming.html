@@ -392,11 +392,204 @@
                     <!-- BASIC -->
                     <div class="pricing-card">
 
+<<<<<<< Updated upstream
                         <div
                             class="plan-name"
                             data-i18n="entertainment_streaming.basic"
                         >
                             Basic
+=======
+        <!-- Feature Comparison Table -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="entertainment_streaming.plan_comparison">Plan Comparison</h2>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="entertainment_streaming.feature">Feature</th>
+                            <th data-i18n="entertainment_streaming.basic">Basic</th>
+                            <th data-i18n="entertainment_streaming.standard">Standard</th>
+                            <th data-i18n="entertainment_streaming.premium">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.monthly_price">Monthly Price</td>
+                            <td data-i18n="entertainment_streaming.7_99">$7.99</td>
+                            <td data-i18n="entertainment_streaming.12_99">$12.99</td>
+                            <td data-i18n="entertainment_streaming.19_99">$19.99</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.simultaneous_screens">Simultaneous Screens</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.video_quality">Video Quality</td>
+                            <td data-i18n="entertainment_streaming.hd">HD</td>
+                            <td data-i18n="entertainment_streaming.4k_uhd">4K UHD</td>
+                            <td data-i18n="entertainment_streaming.4k_uhd_dolby">4K UHD + Dolby</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.offline_downloads">Offline Downloads</td>
+                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.early_premieres">Early Premieres</td>
+                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.behind_the_scenes">Behind-the-Scenes</td>
+                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="entertainment_streaming.ad_free">Ad-Free</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Nova+ Streaming Catalog Dashboard -->
+        <section class="section" id="catalog-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="entertainment_streaming.popular_on_nova">Popular on Nova+</h2>
+                    <p data-i18n="entertainment_streaming.trending_titles_loved_by_millions_o">Trending titles loved by millions of subscribers.</p>
+                </div>
+
+                <!-- Catalog Toolbar (Search & Category pills) -->
+                <div class="catalog-toolbar">
+                    <div class="filter-pills-container">
+                        <button class="filter-pill active" data-genre="category_all" data-i18n="entertainment_streaming.category_all">All</button>
+                        <button class="filter-pill" data-genre="category_action" data-i18n="entertainment_streaming.category_action">Action</button>
+                        <button class="filter-pill" data-genre="category_scifi" data-i18n="entertainment_streaming.category_scifi">Sci-Fi</button>
+                        <button class="filter-pill" data-genre="category_fantasy" data-i18n="entertainment_streaming.category_fantasy">Fantasy</button>
+                        <button class="filter-pill" data-genre="category_comedy" data-i18n="entertainment_streaming.category_comedy">Comedy</button>
+                        <button class="filter-pill" data-genre="category_documentary" data-i18n="entertainment_streaming.category_documentary">Documentary</button>
+                    </div>
+                    <div class="catalog-search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass catalog-search-icon"></i>
+                        <input type="text" id="catalog-search-input" data-i18n-placeholder="entertainment_streaming.streaming_search_catalog" placeholder="Search Nova+ catalog...">
+                    </div>
+                </div>
+
+                <!-- Watchlist Container (hidden when empty) -->
+                <div id="watchlist-container" class="watchlist-section">
+                    <h3 style="margin-bottom: 20px; font-size: 1.5rem;" data-i18n="entertainment_streaming.my_list">My Watchlist</h3>
+                    <div id="watchlist-row" class="card-grid-4"></div>
+                </div>
+
+                <!-- Central Catalog Grid -->
+                <div id="catalog-grid" class="card-grid-4"></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 data-i18n="entertainment_streaming.start_watching_today">Start Watching Today</h2>
+                <p data-i18n="entertainment_streaming.your_first_30_days_are_free_no_comm">Your first 30 days are free. No commitments. Cancel anytime.</p>
+                <a href="../auth/signup.html?plan=standard" class="btn btn-accent btn-lg" data-i18n="entertainment_streaming.get_started">Get Started</a>
+            </div>   
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand" data-i18n-html="footer.novastudios">
+                    <span class="logo-text" data-i18n-html="footer.novastudios_1">NOVA<span class="logo-accent" data-i18n="footer.studios">STUDIOS</span></span>
+                </div>
+                <p data-i18n="footer.nova_studios_is_a_global_entertainm">Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@NovaStudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com/company/novastudios" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 data-i18n="footer.company">Company</h3>
+                <ul>
+                    <li data-i18n-html="footer.about_us"><a href="../about.html" data-i18n="footer.about_us_1">About Us</a></li>
+                    <li data-i18n-html="footer.careers"><a href="../company/careers.html" data-i18n="footer.careers_1">Careers</a></li>
+                    <li data-i18n-html="footer.news"><a href="../news.html" data-i18n="footer.news_1">News</a></li>
+                    <li data-i18n-html="footer.investors"><a href="../company/investors.html" data-i18n="footer.investors_1">Investors</a></li>
+                    <li data-i18n-html="footer.sustainability"><a href="../company/sustainability.html" data-i18n="footer.sustainability_1">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 data-i18n="footer.entertainment">Entertainment</h3>
+                <ul>
+                    <li data-i18n-html="footer.movies"><a href="../movies.html" data-i18n="footer.movies_1">Movies</a></li>
+                    <li data-i18n-html="footer.tv_shows"><a href="../entertainment/tv-shows.html" data-i18n="footer.tv_shows_1">TV Shows</a></li>
+                    <li data-i18n-html="footer.nova"><a href="../entertainment/streaming.html" data-i18n="footer.nova_1">Nova+</a></li>
+                    <li data-i18n-html="footer.theme_parks"><a href="../entertainment/theme-parks.html" data-i18n="footer.theme_parks_1">Theme Parks</a></li>
+                    <li data-i18n-html="footer.shop"><a href="../entertainment/merchandise.html" data-i18n="footer.shop_1">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 data-i18n="footer.support">Support</h3>
+                <ul>
+                    <li data-i18n-html="footer.help_center"><a href="../support/help.html" data-i18n="footer.help_center_1">Help Center</a></li>
+                    <li data-i18n-html="footer.contact_us"><a href="../contact.html" data-i18n="footer.contact_us_1">Contact Us</a></li>
+                    <li data-i18n-html="footer.faq"><a href="../support/faq.html" data-i18n="footer.faq_1">FAQ</a></li>
+                    <li data-i18n-html="footer.privacy_policy"><a href="../legal/privacy.html" data-i18n="footer.privacy_policy_1">Privacy Policy</a></li>
+                    <li data-i18n-html="footer.terms_of_service"><a href="../legal/terms.html" data-i18n="footer.terms_of_service_1">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.2026_nova_studios_all_rights_reserv">© 2026 Nova Studios. All rights reserved.</p>
+            <div class="footer-bottom-links" data-i18n-html="footer.privacy_terms_accessibility">
+                <a href="../legal/privacy.html" data-i18n="footer.privacy">Privacy</a>
+                <a href="../legal/terms.html" data-i18n="footer.terms">Terms</a>
+                <a href="../legal/accessibility-page.html" data-i18n="footer.accessibility">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom Video Player Modal -->
+    <div id="custom-player-modal" aria-modal="true" role="dialog">
+        <button id="player-close-btn" class="player-close-btn" data-i18n-aria-label="entertainment_streaming.player_close" aria-label="Close Player">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="player-container">
+            <video id="player-video" class="player-video" playsinline></video>
+            <div class="player-controls-bar">
+                <!-- Seeker Track -->
+                <div id="player-progress-container" class="player-progress-container">
+                    <div id="player-progress-fill" class="player-progress-fill"></div>
+                </div>
+                <!-- Control Buttons row -->
+                <div class="player-controls-row">
+                    <div class="player-controls-left">
+                        <button id="player-play-btn" class="player-btn" data-i18n-aria-label="entertainment_streaming.player_play" aria-label="Play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <span id="player-time-display" class="player-time">0:00 / 0:00</span>
+                    </div>
+                    <div class="player-controls-right">
+                        <div class="player-volume-container">
+                            <button id="player-mute-btn" class="player-btn" data-i18n-aria-label="entertainment_streaming.player_mute" aria-label="Mute">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                            <input type="range" id="player-volume-slider" class="player-volume-slider" min="0" max="1" step="0.05" value="1">
+>>>>>>> Stashed changes
                         </div>
 
                         <div

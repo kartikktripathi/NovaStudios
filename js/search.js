@@ -25,6 +25,8 @@
         if (!overlay) return;
         
         if (show) {
+            overlay.style.display = 'flex';
+            overlay.offsetHeight; // Force reflow
             overlay.classList.add('active');
             input.value = '';
             selectedIndex = -1;
@@ -35,6 +37,11 @@
         } else {
             overlay.classList.remove('active');
             document.body.style.overflow = '';
+            setTimeout(() => {
+                if (!overlay.classList.contains('active')) {
+                    overlay.style.display = 'none';
+                }
+            }, 250);
         }
     }
 

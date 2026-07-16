@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchOverlay.id = 'global-search-overlay';
         searchOverlay.setAttribute('aria-modal', 'true');
         searchOverlay.setAttribute('role', 'dialog');
+        searchOverlay.style.display = 'none';
         searchOverlay.innerHTML = `
             <div id="global-search-modal">
                 <div class="global-search-header">

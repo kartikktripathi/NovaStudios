@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title data-i18n="seo.entertainment_streaming_title">
-        Nova+ Streaming — Nova Studios
-    </title>
-
-    <meta
-        name="description"
-        content="Stream hundreds of movies, shows, and exclusive originals with Nova+. Start your free trial today."
-        data-i18n-content="seo.entertainment_streaming_desc"
-    >
-
+    <title data-i18n="seo.entertainment_streaming_title">Nova+ Streaming — Nova Studios</title>
+    <meta name="description" content="Stream hundreds of movies, shows, and exclusive originals with Nova+. Start your free trial today." data-i18n-content="seo.entertainment_streaming_desc">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/hero.css">
@@ -24,441 +15,189 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/utilities.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../js/main.js"></script>
 </head>
-
 <body>
 
-    <a
-        href="#main"
-        class="skip-link"
-        data-i18n="entertainment_streaming.skip_to_main_content"
-    >
-        Skip to main content
-    </a>
-
-    <!-- NAVBAR -->
+    <a href="#main" class="skip-link" data-i18n="entertainment_streaming.skip_to_main_content">Skip to main content</a>
     <nav class="navbar">
         <div class="container">
+            <div class="navbar-brand">
+                <a href="../index.html" class="logo" data-i18n-html="navbar.novastudios">
+                    NOVA<span class="logo-accent" data-i18n="navbar.studios">STUDIOS</span>
+                </a>
+            </div>
 
-            <a
-                href="../index.html"
-                class="navbar-brand"
-                data-i18n-html="navbar.novastudios"
-            >
-                <span
-                    class="logo-text"
-                    data-i18n-html="navbar.novastudios_1"
-                >
-                    NOVA<span
-                        class="logo-accent"
-                        data-i18n="navbar.studios"
-                    >STUDIOS</span>
-                </span>
-            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="../about.html" data-i18n="navbar.about">
-                        About
-                    </a>
-
-                    <div class="mega-menu">
-                        <div class="mega-menu-grid">
-
-                            <div>
-                                <div
-                                    class="mega-menu-header"
-                                    data-i18n="navbar.company"
-                                >
-                                    Company
-                                </div>
-
-                                <a href="../about.html" data-i18n="navbar.about_us">
-                                    About Us
-                                </a>
-
-                                <a
-                                    href="../company/history.html"
-                                    data-i18n="navbar.our_history"
-                                >
-                                    Our History
-                                </a>
-
-                                <a
-                                    href="../company/leadership.html"
-                                    data-i18n="navbar.leadership"
-                                >
-                                    Leadership
-                                </a>
-
-                                <a
-                                    href="../company/careers.html"
-                                    data-i18n="navbar.careers"
-                                >
-                                    Careers
-                                </a>
-                            </div>
-
-                            <div>
-                                <div
-                                    class="mega-menu-header"
-                                    data-i18n="navbar.info"
-                                >
-                                    Info
-                                </div>
-
-                                <a
-                                    href="../company/departments.html"
-                                    data-i18n="navbar.departments"
-                                >
-                                    Departments
-                                </a>
-
-                                <a
-                                    href="../company/investors.html"
-                                    data-i18n="navbar.investors"
-                                >
-                                    Investors
-                                </a>
-
-                                <a
-                                    href="../company/sustainability.html"
-                                    data-i18n="navbar.sustainability"
-                                >
-                                    Sustainability
-                                </a>
-
-                                <a
-                                    href="../company/partnerships.html"
-                                    data-i18n="navbar.partnerships"
-                                >
-                                    Partnerships
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../about.html" data-i18n="navbar.about_us">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="navbar.entertainment">Entertainment</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../movies.html" data-i18n="navbar.movies">Movies</a></li>
+                        <li><a href="tv-shows.html" data-i18n="navbar.tv_shows">TV Shows</a></li>
+                        <li><a href="streaming.html" class="active" data-i18n="navbar.nova">Nova+ Streaming</a></li>
+                        <li><a href="theme-parks.html" data-i18n="navbar.theme_parks">Theme Parks</a></li>
+                        <li><a href="merchandise.html" data-i18n="navbar.shop">Shop</a></li>
+                    </ul>
                 </li>
-
-                <li>
-                    <a
-                        href="../movies.html"
-                        class="active"
-                        data-i18n="navbar.entertainment"
-                    >
-                        Entertainment
-                    </a>
-
-                    <div class="mega-menu">
-                        <div class="mega-menu-grid">
-
-                            <div>
-                                <div
-                                    class="mega-menu-header"
-                                    data-i18n="navbar.watch"
-                                >
-                                    Watch
-                                </div>
-
-                                <a href="../movies.html" data-i18n="navbar.movies">
-                                    Movies
-                                </a>
-
-                                <a
-                                    href="../entertainment/tv-shows.html"
-                                    data-i18n="navbar.tv_shows"
-                                >
-                                    TV Shows
-                                </a>
-
-                                <a
-                                    href="../entertainment/animation.html"
-                                    data-i18n="navbar.animation"
-                                >
-                                    Animation
-                                </a>
-
-                                <a
-                                    href="../entertainment/streaming.html"
-                                    data-i18n="navbar.nova"
-                                >
-                                    Nova+
-                                </a>
-                            </div>
-
-                            <div>
-                                <div
-                                    class="mega-menu-header"
-                                    data-i18n="navbar.experience"
-                                >
-                                    Experience
-                                </div>
-
-                                <a
-                                    href="../entertainment/theme-parks.html"
-                                    data-i18n="navbar.theme_parks"
-                                >
-                                    Theme Parks
-                                </a>
-
-                                <a
-                                    href="../entertainment/merchandise.html"
-                                    data-i18n="navbar.merchandise"
-                                >
-                                    Merchandise
-                                </a>
-
-                                <a
-                                    href="../entertainment/events.html"
-                                    data-i18n="navbar.events"
-                                >
-                                    Events
-                                </a>
-
-                                <a
-                                    href="../media/gallery.html"
-                                    data-i18n="navbar.gallery"
-                                >
-                                    Gallery
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="../news.html" data-i18n="navbar.news_1">
-                        News
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../blog.html" data-i18n="navbar.blog_1">
-                        Blog
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../awards.html" data-i18n="navbar.awards_1">
-                        Awards
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../contact.html" data-i18n="navbar.contact_1">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="../news.html" data-i18n="navbar.news_1">News</a></li>
+                <li><a href="../blog.html" data-i18n="navbar.blog_1">Blog</a></li>
+                <li><a href="../awards.html" data-i18n="navbar.awards_1">Awards</a></li>
+                <li><a href="../contact.html" data-i18n="navbar.contact_1">Contact</a></li>
             </ul>
 
             <div class="navbar-actions">
-
-                <button
-                    id="theme-toggle"
-                    class="theme-toggle"
-                    aria-label="Toggle Theme"
-                >
-                    <svg
-                        class="sun-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        width="20"
-                        height="20"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"
-                        ></path>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                     </svg>
-
-                    <svg
-                        class="moon-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        width="20"
-                        height="20"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                        ></path>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
-
-                <button
-                    class="nav-toggle"
-                    aria-label="Toggle navigation"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
             </div>
         </div>
     </nav>
 
-
-    <!-- HERO -->
-    <section
-        class="hero hero-large"
-        id="main"
-        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1020 50%, #0a1628 100%);"
-    >
+    <header class="hero hero-gradient-dark" id="main">
         <div class="container">
-
-            <h1
-                data-i18n-html="entertainment_streaming.everything_you_love_all_in_one_plac"
-            >
-                Everything You Love.<br>
-                All in One Place.
-            </h1>
-
-            <p
-                style="color: #9ca3af;"
-                data-i18n="entertainment_streaming.stream_hundreds_of_movies_tv_shows_"
-            >
-                Stream hundreds of movies, TV shows, animated features,
-                documentaries, and Nova+ Originals — anytime, anywhere,
-                on any device.
-            </p>
-
-            <div
-                class="btn-group"
-                style="justify-content: center;"
-            >
-                <a
-                    href="#plans"
-                    id="startFreeTrialButton"
-                    class="btn btn-accent"
-                    data-i18n="entertainment_streaming.start_free_trial"
-                >
-                    Start Free Trial
-                </a>
-
-                <a
-                    href="#"
-                    class="btn btn-light btn-lg"
-                    data-i18n="entertainment_streaming.view_plans"
-                >
-                    View Plans
-                </a>
+            <div class="breadcrumbs" data-i18n-html="entertainment_streaming.home_entertainment_st"><a href="../index.html" data-i18n="entertainment_streaming.home">Home</a> <span>&gt;</span> <a href="../index.html" data-i18n="entertainment_streaming.entertainment">Entertainment</a> <span>&gt;</span> Nova+ Streaming</div>
+            <h1 data-i18n-html="entertainment_streaming.everything_you_love_all_in_one_plac">Everything You Love.<br>All in One Place.</h1>
+            <p data-i18n="entertainment_streaming.stream_hundreds_of_movies_tv_shows_">Stream hundreds of movies, TV shows, animated features, documentaries, and Nova+
+                Originals — anytime, anywhere, on any device.</p>
+            <div class="hero-actions" data-i18n-html="entertainment_streaming.start_free_trial_view_plans">
+                <a href="../auth/signup.html?plan=standard" class="btn btn-accent btn-lg" data-i18n="entertainment_streaming.start_free_trial">Start Free Trial</a>
+                <a href="#plans" class="btn btn-light btn-lg" data-i18n="entertainment_streaming.view_plans">View Plans</a>
             </div>
-
         </div>
-    </section>
-
+    </header>
 
     <main>
-
-        <!-- PRICING CARDS -->
+        <!-- Plans -->
         <section class="section" id="plans">
-
             <div class="container">
-
                 <div class="section-header">
-
-                    <h2 data-i18n="entertainment_streaming.choose_your_plan">
-                        Choose Your Plan
-                    </h2>
-
-                    <p data-i18n="entertainment_streaming.all_plans_include_a_30_day_free_tri">
-                        All plans include a 30-day free trial. Cancel anytime.
-                    </p>
-
+                    <h2 data-i18n="entertainment_streaming.choose_your_plan">Choose Your Plan</h2>
+                    <p data-i18n="entertainment_streaming.all_plans_include_a_30_day_free_tri">All plans include a 30-day free trial. Cancel anytime.</p>
                 </div>
 
-
                 <div class="card-grid">
-
-                    <!-- BASIC -->
+                    <!-- Basic -->
                     <div class="pricing-card">
+                        <h3 class="plan-name" data-i18n="entertainment_streaming.basic">Basic</h3>
+                        <div class="plan-price" data-i18n-html="entertainment_streaming.7_99_month">$7.99<span>/month</span></div>
+                        <p class="plan-description" data-i18n="entertainment_streaming.great_for_individuals_who_want_esse">Great for individuals who want essential access.</p>
+                        <ul class="plan-features">
+                            <li data-i18n="entertainment_streaming.1_screen_at_a_time">✓ 1 screen at a time</li>
+                            <li data-i18n="entertainment_streaming.hd_quality">✓ HD quality</li>
+                            <li data-i18n="entertainment_streaming.full_movie_show_library">✓ Full movie &amp; show library</li>
+                            <li data-i18n="entertainment_streaming.downloads_for_offline">✗ Downloads for offline</li>
+                            <li data-i18n="entertainment_streaming.early_access_to_premieres">✗ Early access to premieres</li>
+                            <li data-i18n="entertainment_streaming.exclusive_behind_the_scenes">✗ Exclusive behind-the-scenes</li>
+                        </ul>
+                        <a href="../auth/signup.html?plan=basic" class="btn btn-primary btn-block" data-i18n="entertainment_streaming.start_free_trial">Start Free Trial</a>
+                    </div>
 
-<<<<<<< Updated upstream
-                        <div
-                            class="plan-name"
-                            data-i18n="entertainment_streaming.basic"
-                        >
-                            Basic
-=======
-        <!-- Feature Comparison Table -->
+                    <!-- Standard -->
+                    <div class="pricing-card featured">
+                        <span class="badge" data-i18n="entertainment_streaming.most_popular">Most Popular</span>
+                        <h3 class="plan-name" data-i18n="entertainment_streaming.standard">Standard</h3>
+                        <div class="plan-price" data-i18n-html="entertainment_streaming.12_99_month">$12.99<span>/month</span></div>
+                        <p class="plan-description" data-i18n="entertainment_streaming.perfect_for_families_and_entertainm">Perfect for families and entertainment lovers.</p>
+                        <ul class="plan-features">
+                            <li data-i18n="entertainment_streaming.3_screens_at_a_time">✓ 3 screens at a time</li>
+                            <li data-i18n="entertainment_streaming.4k_ultra_hd">✗ 4K Ultra HD</li>
+                            <li data-i18n="entertainment_streaming.full_movie_show_library">✓ Full movie &amp; show library</li>
+                            <li data-i18n="entertainment_streaming.downloads_for_offline_1">✓ Downloads for offline</li>
+                            <li data-i18n="entertainment_streaming.early_access_to_premieres">✗ Early access to premieres</li>
+                            <li data-i18n="entertainment_streaming.exclusive_behind_the_scenes_1">✓ Exclusive behind-the-scenes</li>
+                        </ul>
+                        <a href="../auth/signup.html?plan=standard" class="btn btn-accent btn-block" data-i18n="entertainment_streaming.start_free_trial">Start Free Trial</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name" data-i18n="entertainment_streaming.premium">Premium</h3>
+                        <div class="plan-price" data-i18n-html="entertainment_streaming.19_99_month">$19.99<span>/month</span></div>
+                        <p class="plan-description" data-i18n="entertainment_streaming.the_ultimate_entertainment_experien">The ultimate entertainment experience.</p>
+                        <ul class="plan-features">
+                            <li data-i18n="entertainment_streaming.5_screens_at_a_time">✓ 5 screens at a time</li>
+                            <li data-i18n="entertainment_streaming.4k_ultra_hd_dolby_atmos">✓ 4K Ultra HD + Dolby Atmos</li>
+                            <li data-i18n="entertainment_streaming.full_movie_show_library">✓ Full movie &amp; show library</li>
+                            <li data-i18n="entertainment_streaming.downloads_for_offline_1">✓ Downloads for offline</li>
+                            <li data-i18n="entertainment_streaming.early_access_to_premieres_1">✓ Early access to premieres</li>
+                            <li data-i18n="entertainment_streaming.exclusive_behind_the_scenes_1">✓ Exclusive behind-the-scenes</li>
+                        </ul>
+                        <a href="../auth/signup.html?plan=premium" class="btn btn-primary btn-block" data-i18n="entertainment_streaming.start_free_trial">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Comparison -->
         <section class="section section-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 data-i18n="entertainment_streaming.plan_comparison">Plan Comparison</h2>
                 </div>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th data-i18n="entertainment_streaming.feature">Feature</th>
-                            <th data-i18n="entertainment_streaming.basic">Basic</th>
-                            <th data-i18n="entertainment_streaming.standard">Standard</th>
-                            <th data-i18n="entertainment_streaming.premium">Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.monthly_price">Monthly Price</td>
-                            <td data-i18n="entertainment_streaming.7_99">$7.99</td>
-                            <td data-i18n="entertainment_streaming.12_99">$12.99</td>
-                            <td data-i18n="entertainment_streaming.19_99">$19.99</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.simultaneous_screens">Simultaneous Screens</td>
-                            <td>1</td>
-                            <td>3</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.video_quality">Video Quality</td>
-                            <td data-i18n="entertainment_streaming.hd">HD</td>
-                            <td data-i18n="entertainment_streaming.4k_uhd">4K UHD</td>
-                            <td data-i18n="entertainment_streaming.4k_uhd_dolby">4K UHD + Dolby</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.offline_downloads">Offline Downloads</td>
-                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.early_premieres">Early Premieres</td>
-                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.behind_the_scenes">Behind-the-Scenes</td>
-                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
-                            <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                        </tr>
-                        <tr>
-                            <td data-i18n="entertainment_streaming.ad_free">Ad-Free</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                            <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="entertainment_streaming.feature">Feature</th>
+                                <th data-i18n="entertainment_streaming.basic">Basic</th>
+                                <th data-i18n="entertainment_streaming.standard">Standard</th>
+                                <th data-i18n="entertainment_streaming.premium">Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.monthly_price">Monthly Price</td>
+                                <td data-i18n="entertainment_streaming.7_99">$7.99</td>
+                                <td data-i18n="entertainment_streaming.12_99">$12.99</td>
+                                <td data-i18n="entertainment_streaming.19_99">$19.99</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.simultaneous_screens">Simultaneous Screens</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.video_quality">Video Quality</td>
+                                <td data-i18n="entertainment_streaming.hd">HD</td>
+                                <td data-i18n="entertainment_streaming.4k_ultra_hd_1">✓ 4K Ultra HD</td>
+                                <td data-i18n="entertainment_streaming.4k_ultra_hd_dolby_atmos">✓ 4K Ultra HD + Dolby Atmos</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.offline_downloads">Offline Downloads</td>
+                                <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                                <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                                <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.early_premieres">Early Premieres</td>
+                                <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                                <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                                <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="entertainment_streaming.behind_the_scenes">Behind-the-Scenes</td>
+                                <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                                <td class="cross" data-i18n="entertainment_streaming.text_8qdic">✗</td>
+                                <td class="check" data-i18n="entertainment_streaming.text_dluw0">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -503,16 +242,15 @@
                 <h2 data-i18n="entertainment_streaming.start_watching_today">Start Watching Today</h2>
                 <p data-i18n="entertainment_streaming.your_first_30_days_are_free_no_comm">Your first 30 days are free. No commitments. Cancel anytime.</p>
                 <a href="../auth/signup.html?plan=standard" class="btn btn-accent btn-lg" data-i18n="entertainment_streaming.get_started">Get Started</a>
-            </div>   
+            </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
                 <div class="footer-brand" data-i18n-html="footer.novastudios">
-                    <span class="logo-text" data-i18n-html="footer.novastudios_1">NOVA<span class="logo-accent" data-i18n="footer.studios">STUDIOS</span></span>
+                    NOVA<span class="logo-accent" data-i18n="footer.studios">STUDIOS</span>
                 </div>
                 <p data-i18n="footer.nova_studios_is_a_global_entertainm">Nova Studios is a global entertainment company dedicated to bringing extraordinary stories to life.</p>
                 <div class="footer-social">
@@ -563,6 +301,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Custom Video Player Modal -->
     <div id="custom-player-modal" aria-modal="true" role="dialog">
         <button id="player-close-btn" class="player-close-btn" data-i18n-aria-label="entertainment_streaming.player_close" aria-label="Close Player">
@@ -589,220 +328,18 @@
                                 <i class="fa-solid fa-volume-high"></i>
                             </button>
                             <input type="range" id="player-volume-slider" class="player-volume-slider" min="0" max="1" step="0.05" value="1">
->>>>>>> Stashed changes
                         </div>
-
-                        <div
-                            class="plan-price"
-                            data-i18n-html="entertainment_streaming.7_99_month"
-                        >
-                            $7.99
-                            <span data-i18n="entertainment_streaming.month">
-                                /month
-                            </span>
-                        </div>
-
-                        <p
-                            class="plan-description"
-                            data-i18n="entertainment_streaming.great_for_individuals_who_want_esse"
-                        >
-                            Great for individuals who want essential access.
-                        </p>
-
-                        <ul class="plan-features">
-                            <li>✓ Full movie &amp; show library</li>
-                            <li>✓ 1 screen at a time</li>
-                            <li>✓ HD quality</li>
-                            <li>✗ Downloads for offline</li>
-                            <li>✗ 4K Ultra HD</li>
-                            <li>✗ Early access to premieres</li>
-                        </ul>
-
-                        <a
-                            href="#"
-                            class="btn btn-secondary w-100 auth-required"
-                            data-plan="basic"
-                            data-i18n="entertainment_streaming.start_free_trial"
-                        >
-                            Start Free Trial
-                        </a>
-
+                        <button id="player-fullscreen-btn" class="player-btn" data-i18n-aria-label="entertainment_streaming.player_fullscreen" aria-label="Fullscreen">
+                            <i class="fa-solid fa-maximize"></i>
+                        </button>
                     </div>
-
-
-                    <!-- STANDARD -->
-                    <div class="pricing-card featured">
-
-                        <span
-                            class="badge"
-                            data-i18n="entertainment_streaming.most_popular"
-                        >
-                            Most Popular
-                        </span>
-
-                        <div
-                            class="plan-name"
-                            data-i18n="entertainment_streaming.standard"
-                        >
-                            Standard
-                        </div>
-
-                        <div
-                            class="plan-price"
-                            data-i18n-html="entertainment_streaming.12_99_month"
-                        >
-                            $12.99
-                            <span data-i18n="entertainment_streaming.month">
-                                /month
-                            </span>
-                        </div>
-
-                        <p
-                            class="plan-description"
-                            data-i18n="entertainment_streaming.perfect_for_families_and_entertainm"
-                        >
-                            Perfect for families and entertainment lovers.
-                        </p>
-
-                        <ul class="plan-features">
-                            <li>✓ Full movie &amp; show library</li>
-                            <li>✓ 3 screens at a time</li>
-                            <li>✓ 4K Ultra HD</li>
-                            <li>✓ Downloads for offline</li>
-                            <li>✓ Early access to premieres</li>
-                            <li>✗ Exclusive behind-the-scenes</li>
-                        </ul>
-
-                        <a
-                            href="#"
-                            class="btn btn-accent w-100 auth-required"
-                            data-plan="standard"
-                            data-i18n="entertainment_streaming.start_free_trial"
-                        >
-                            Start Free Trial
-                        </a>
-
-                    </div>
-
-
-                    <!-- PREMIUM -->
-                    <div class="pricing-card">
-
-                        <div
-                            class="plan-name"
-                            data-i18n="entertainment_streaming.premium"
-                        >
-                            Premium
-                        </div>
-
-                        <div
-                            class="plan-price"
-                            data-i18n-html="entertainment_streaming.19_99_month"
-                        >
-                            $19.99
-                            <span data-i18n="entertainment_streaming.month">
-                                /month
-                            </span>
-                        </div>
-
-                        <p
-                            class="plan-description"
-                            data-i18n="entertainment_streaming.the_ultimate_entertainment_experien"
-                        >
-                            The ultimate entertainment experience.
-                        </p>
-
-                        <ul class="plan-features">
-                            <li>✓ Full movie &amp; show library</li>
-                            <li>✓ 5 screens at a time</li>
-                            <li>✓ 4K Ultra HD + Dolby Atmos</li>
-                            <li>✓ Downloads for offline</li>
-                            <li>✓ Early access to premieres</li>
-                            <li>✓ Exclusive behind-the-scenes</li>
-                        </ul>
-
-                        <a
-                            href="#"
-                            class="btn btn-secondary w-100 auth-required"
-                            data-plan="premium"
-                            data-i18n="entertainment_streaming.start_free_trial"
-                        >
-                            Start Free Trial
-                        </a>
-
-                    </div>
-
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
+    <script src="../js/nav.js"></script>
+    <script src="../js/streaming.js"></script>
 
-        <!-- PLAN COMPARISON -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    function getSession() {
-        try {
-            const savedSession = sessionStorage.getItem("novaPlusSession");
-            return savedSession ? JSON.parse(savedSession) : null;
-        } catch (error) {
-            return null;
-        }
-    }
-
-    // Top Start Free Trial button
-    const mainTrialButton =
-        document.getElementById("startFreeTrialButton");
-
-    if (mainTrialButton) {
-        mainTrialButton.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const session = getSession();
-
-            if (session && session.authenticated === true) {
-                document.getElementById("plans").scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                window.location.href = "../auth/login.html";
-            }
-        });
-    }
-
-    // Basic, Standard and Premium plan buttons
-    document.querySelectorAll(".auth-required").forEach(function (button) {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const session = getSession();
-            const plan = button.dataset.plan;
-
-          if (session && session.authenticated === true) {
-    sessionStorage.setItem("novaPlusPlan", plan);
-    sessionStorage.setItem("novaPlusTrialActive", "true");
-
-    alert(
-        "Your " +
-        plan.charAt(0).toUpperCase() +
-        plan.slice(1) +
-        " free trial has started successfully!"
-    );
-
-    window.location.href = "../movies.html";
-} else {
-    sessionStorage.setItem("selectedPlan", plan);
-    window.location.href = "../auth/login.html";
-}  
-        });
-    });
-
-});
-</script>
-
-<script src="../js/nav.js"></script>
-<script src="../js/streaming.js"></script>
-
-</main>
 </body>
-</html>         
+</html>

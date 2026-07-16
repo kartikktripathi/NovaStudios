@@ -2064,7 +2064,29 @@ window.translations.es = {
         "video_quality": "Calidad de vídeo",
         "view_plans": "Ver planos",
         "wild_planet": "Planeta salvaje",
-        "your_first_30_days_are_free_no_comm": "Tus primeros 30 días son gratis. Sin compromisos. Cancele en cualquier momento."
+        "your_first_30_days_are_free_no_comm": "Tus primeros 30 días son gratis. Sin compromisos. Cancele en cualquier momento.",
+        "streaming_search_catalog": "Buscar en el catálogo de Nova+...",
+        "my_list": "Mi lista de seguimiento",
+        "empty_watchlist": "Tu lista de seguimiento está vacía. ¡Agrega películas y series a continuación para comenzar a construir tu lista!",
+        "add_to_watchlist": "Añadir a la lista",
+        "remove_from_watchlist": "Eliminar",
+        "play_trailer": "Ver Tráiler",
+        "watch_now": "Ver Ahora",
+        "category_all": "Todos",
+        "category_action": "Acción",
+        "category_scifi": "Ciencia Ficción",
+        "category_fantasy": "Fantasía",
+        "category_comedy": "Comedia",
+        "category_documentary": "Documental",
+        "category_drama": "Drama",
+        "more_info": "Más información",
+        "player_close": "Cerrar reproductor",
+        "player_play": "Reproducir",
+        "player_pause": "Pausar",
+        "player_mute": "Silenciar",
+        "player_unmute": "Desactivar silencio",
+        "player_fullscreen": "Pantalla completa",
+        "player_exit_fullscreen": "Salir de pantalla completa"
     },
     "entertainment_theme-parks": {
         "120m": "120M",
@@ -2879,5 +2901,16 @@ window.translations.es = {
         "theme_parks": "Parques Temáticos",
         "tickets_park_hours_accessibility_di": "Entradas, horarios del parque, accesibilidad, restaurantes e información sobre pases anuales.",
         "view_faq": "Ver preguntas frecuentes"
+    },
+    "global_search": {
+        "search_placeholder": "Buscar películas, series, páginas...",
+        "search_no_results": "No se encontraron resultados para",
+        "search_category_movies": "Películas",
+        "search_category_tv": "Series de TV",
+        "search_category_pages": "Páginas",
+        "search_category_parks": "Parques Temáticos",
+        "search_aria_label": "Buscar en el sitio web",
+        "search_shortcut_info": "Presiona Esc para cerrar, Tab para navegar",
+        "search_title": "Búsqueda Global"
     }
 };

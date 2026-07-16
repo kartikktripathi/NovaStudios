@@ -110,6 +110,7 @@
             window.currentLang = lang;
             localStorage.setItem('lang', lang);
             window.translatePage();
+            window.dispatchEvent(new CustomEvent('languagechanged', { detail: { lang } }));
         }
     };
 
@@ -153,6 +154,7 @@
 
         injectLanguageSwitcher();
         window.translatePage();
+        window.dispatchEvent(new CustomEvent('languagechanged', { detail: { lang: window.currentLang } }));
 
         if (observer) {
             observer.observe(document.documentElement, { childList: true, subtree: true });

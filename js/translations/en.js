@@ -2064,7 +2064,29 @@ window.translations.en = {
         "video_quality": "Video Quality",
         "view_plans": "View Plans",
         "wild_planet": "Wild Planet",
-        "your_first_30_days_are_free_no_comm": "Your first 30 days are free. No commitments. Cancel anytime."
+        "your_first_30_days_are_free_no_comm": "Your first 30 days are free. No commitments. Cancel anytime.",
+        "streaming_search_catalog": "Search Nova+ catalog...",
+        "my_list": "My Watchlist",
+        "empty_watchlist": "Your watchlist is empty. Add movies and TV shows below to start building your list!",
+        "add_to_watchlist": "Add to List",
+        "remove_from_watchlist": "Remove",
+        "play_trailer": "Watch Trailer",
+        "watch_now": "Watch Now",
+        "category_all": "All",
+        "category_action": "Action",
+        "category_scifi": "Sci-Fi",
+        "category_fantasy": "Fantasy",
+        "category_comedy": "Comedy",
+        "category_documentary": "Documentary",
+        "category_drama": "Drama",
+        "more_info": "More Info",
+        "player_close": "Close Player",
+        "player_play": "Play",
+        "player_pause": "Pause",
+        "player_mute": "Mute",
+        "player_unmute": "Unmute",
+        "player_fullscreen": "Fullscreen",
+        "player_exit_fullscreen": "Exit Fullscreen"
     },
     "entertainment_theme-parks": {
         "120m": "120M",
@@ -2881,5 +2903,16 @@ window.translations.en = {
         "theme_parks": "Theme Parks",
         "tickets_park_hours_accessibility_di": "Tickets, park hours, accessibility, dining, and annual pass information.",
         "view_faq": "View FAQ"
+    },
+    "global_search": {
+        "search_placeholder": "Search movies, TV shows, pages...",
+        "search_no_results": "No results found for",
+        "search_category_movies": "Movies",
+        "search_category_tv": "TV Shows",
+        "search_category_pages": "Pages",
+        "search_category_parks": "Theme Parks",
+        "search_aria_label": "Search website",
+        "search_shortcut_info": "Press Esc to close, Tab to navigate",
+        "search_title": "Global Search"
     }
 };

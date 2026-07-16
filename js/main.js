@@ -34,11 +34,19 @@
             }
         }
 
-        // Load translations and i18n script dynamically in order (async = false)
+        // Load search stylesheet dynamically
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = basePath + 'css/search.css';
+        document.head.appendChild(link);
+
+        // Load translations, search index and scripts dynamically in order (async = false)
         const scriptsToLoad = [
             'js/translations/en.js',
             'js/translations/es.js',
-            'js/i18n.js'
+            'js/i18n.js',
+            'js/search-index.js',
+            'js/search.js'
         ];
 
         scriptsToLoad.forEach(src => {
@@ -137,6 +145,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         showSkipLink();
+    }
+
+    // Inject global search button into navbar actions
+    const navbarActions = document.querySelector('.navbar-actions');
+    if (navbarActions && !document.getElementById('global-search-btn')) {
+        const themeToggle = document.getElementById('theme-toggle') || navbarActions.querySelector('.theme-toggle');
+        const searchBtn = document.createElement('button');
+        searchBtn.id = 'global-search-btn';
+        searchBtn.className = 'nav-search-btn';
+        searchBtn.setAttribute('data-i18n-aria-label', 'global_search.search_aria_label');
+        searchBtn.setAttribute('aria-label', 'Search website');
+        searchBtn.innerHTML = '<i class="fa fa-search"></i>';
+        
+        searchBtn.addEventListener('click', () => {
+            if (window.openGlobalSearch) {
+                window.openGlobalSearch();
+            }
+        });
+
+        if (themeToggle) {
+            navbarActions.insertBefore(searchBtn, themeToggle);
+        } else {
+            navbarActions.appendChild(searchBtn);
+        }
+    }
+
+    // Inject global search overlay modal into body
+    if (!document.getElementById('global-search-overlay')) {
+        const searchOverlay = document.createElement('div');
+        searchOverlay.id = 'global-search-overlay';
+        searchOverlay.setAttribute('aria-modal', 'true');
+        searchOverlay.setAttribute('role', 'dialog');
+        searchOverlay.style.display = 'none';
+        searchOverlay.innerHTML = `
+            <div id="global-search-modal">
+                <div class="global-search-header">
+                    <span class="global-search-icon"><i class="fa fa-search"></i></span>
+                    <input type="text" id="global-search-input" data-i18n-placeholder="global_search.search_placeholder" placeholder="Search movies, TV shows, pages...">
+                    <button id="global-search-close-btn" class="global-search-close" data-i18n-aria-label="global_search.player_close" aria-label="Close search">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="global-search-body" class="global-search-body"></div>
+                <div class="global-search-footer">
+                    <span data-i18n="global_search.search_shortcut_info">Press Esc to close, Tab to navigate</span>
+                    <div class="search-shortcuts">
+                        <span><span class="search-shortcut-key">↑↓</span> Navigate</span>
+                        <span><span class="search-shortcut-key">↵</span> Select</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(searchOverlay);
     }
 
     // Enable transition animations only after initial rendering is done

@@ -101,19 +101,73 @@
     color: #fef3c7;
 }
 
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
 /* Latest releases row */
 .releases-row {
     display: flex;
     gap: 24px;
     overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 16px;
     width: 100%;
     max-width: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.releases-row::-webkit-scrollbar {
+    display: none;
 }
 
 .releases-row .movie-card {
     min-width: 260px;
     flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-button {
+    position: relative;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.carousel-button:active {
+    transform: scale(0.95);
+}
+
+.carousel-button svg {
+    width: 20px;
+    height: 20px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 /* Partners logo strip */

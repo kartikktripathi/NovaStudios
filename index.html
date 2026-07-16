@@ -149,8 +149,14 @@
                     <h2 data-i18n="index.latest_releases">Latest Releases</h2>
                     <p data-i18n="index.discover_our_newest_stories_coming_">Discover our newest stories coming to theaters and Nova+ this season.</p>
                 </div>
-                <!-- ISSUE (Intermediate): releases-row causes horizontal scroll on tablets -->
-                <div class="releases-row">
+               <!-- ISSUE (Intermediate): releases-row causes horizontal scroll on tablets -->
+<div class="carousel-wrapper">
+    <button class="carousel-button carousel-button-prev" aria-label="Previous movies">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </button>
+    <div class="releases-row" id="releasesCarousel">
                     <a href="entertainment/details/movie-stellar-horizon.html" class="movie-card"
                         style="text-decoration: none; color: inherit; display: block;">
                         <img src="images/movie-posters/stellar-horizon.png" alt="Stellar Horizon poster" class="card-img">
@@ -205,7 +211,13 @@
                                 <span class="genre" data-i18n="index.adventure">Adventure</span>
                             </div>
                         </div>
-                    </a>
+                   </a>
+                    </div>
+                    <button class="carousel-button carousel-button-next" aria-label="Next movies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
@@ -438,7 +450,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/nav.js"></script>
-    <script src="js/skiplink.js"></script>
+  <script src="js/nav.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/skiplink.js"></script>
     </body>
 </html>
